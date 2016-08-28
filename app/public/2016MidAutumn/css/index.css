@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    font-family: "微软雅黑", "Microsoft YaHei";
+    color: #fff;
+}
+.clearfix:after {
+    content: ' ';
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    display: block;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #a39de7;
+}
+img {
+    vertical-align: top;
+}
+
+.module-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.module-bg img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.module-loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+.module-loading .wrapper-moons {
+    width: 561px;
+    position: relative;
+    margin: 431px auto 0 auto;
+    text-align: center;
+}
+.module-loading .wrapper-moons img {
+    /*position: absolute;
+    left: 0;
+    top: 0;*/
+    width: 100%;
+}
+.module-loading .wrapper-moons .wrapper-percent {
+    vertical-align: top;
+    font-size: 48px;
+    display: block;
+    position: absolute;
+    top: 205px;
+    width: 100%;
+}
+
+.module-guide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.module-guide .wrapper-image {
+    position: absolute;
+    top: 83px;
+    bottom: 0;
+    width: 100%;
+}
+.module-guide .wrapper-image img {
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.module-prologue {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.module-prologue .wrapper-image {
+    padding-top: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.module-bueaty {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    /*display: none;*/
+}
+.module-bueaty .wrapper-image {
+    margin-left: 66px;
+    margin-top: 117px;
+}
+.module-bueaty .wrapper-btn {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+    text-align: center;
+}
+.module-bueaty .wrapper-btn .btn-help {
+    display: inline-block;
+    vertical-align: top;
+    width: 470px;
+    height: 99px;
+    background: url(../img/btn-help.png) no-repeat center top transparent;
+}
