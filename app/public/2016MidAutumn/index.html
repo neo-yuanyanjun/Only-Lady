@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/iscroll.js"></script>
     <script src="./js/zepto.min.js"></script>
+    <script src="./js/zepto.touch.js"></script>
     <script src="./js/index.js"></script>
 </head>
 <body>
@@ -44,10 +45,9 @@
                 <img class="text-3" src="./img/prologue-text-3.png"/>
                 <img class="text-4" src="./img/prologue-text-4.png"/>
             </div>
-            <div class="module-bueaty">
-                <div class="wrapper-image">
-                    <img src="./img/beauty.png" alt="">
-                </div>
+            <div class="module-beauty">
+                <img class="text" src="./img/text-beauty.png" alt="">
+                <img class="beauty" src="./img/beauty.png" alt="">
                 <div class="wrapper-btn">
                     <div class="btn-help"></div>
                 </div>
@@ -56,14 +56,16 @@
                 <div id="wrapper-scroller">
                     <div id="scroller">
                         <ul>
-                            <li><img src="./img/cake-1.png" alt=""></li>
-                            <li><img src="./img/cake-2.png" alt=""></li>
-                            <li><img src="./img/cake-3.png" alt=""></li>
-                            <li><img src="./img/cake-4.png" alt=""></li>
-                            <li><img src="./img/cake-5.png" alt=""></li>
+                            <li data-id="1"><img src="./img/cake-1.png" alt=""></li>
+                            <li data-id="2"><img src="./img/cake-2.png" alt=""></li>
+                            <li data-id="3"><img src="./img/cake-3.png" alt=""></li>
+                            <li data-id="4"><img src="./img/cake-4.png" alt=""></li>
+                            <li data-id="5"><img src="./img/cake-5.png" alt=""></li>
                         </ul>
                     </div>
                 </div>
+                <div class="left-bar"></div>
+                <div class="right-bar"></div>
                 <div class="arrow-left"></div>
                 <div class="arrow-right"></div>
                 <div class="wrapper-btn">
@@ -71,25 +73,77 @@
                 </div>
             </div>
             <div class="module-detail">
+                <div class="light">
+                    <img src="./img/light.png" alt="">
+                </div>
                 <div class="wrapper-eat">
                     <img src="./img/eat.png" alt="">
                 </div>
                 <div class="wrapper-result">
                     <img src="./img/result-1.png" alt="">
                 </div>
+                
                 <div class="wrapper-detail">
-                    <div class="circle"></div>
+                    <div class="circle">
+                        <img src="./img/circle-1.png" alt="">
+                    </div>
                     <div class="ticket-text">
                         <img src="./img/ticket-text-1.png" alt="">
                     </div>
-                    <div class="preview-img">
-                        <img src="./img/cake-preview-1.png" alt="">
+                    <div class="cake-detail cake-detail-1">
+                        <div class="preview-img">
+                            <img src="./img/cake-preview-1.png" alt="">
+                        </div>
+                        <div class="title">
+                            1香港原装美心流心奶黄月饼
+                        </div>
+                        <div class="description">
+                            1双重烘焗，浓滑的奶黄夹着甘沙咸蛋黄，微波炉里加热3-5秒奶黄刚好从心化开，掰开月饼真的流奶黄！蛋和奶的调配均衡度很好，口感一流！
+                        </div>
                     </div>
-                    <div class="title">
-                        香港原装美心流心奶黄月饼
+                    <div class="cake-detail cake-detail-2">
+                        <div class="preview-img">
+                            <img src="./img/cake-preview-2.png" alt="">
+                        </div>
+                        <div class="title">
+                            2香港原装美心流心奶黄月饼
+                        </div>
+                        <div class="description">
+                            2双重烘焗，浓滑的奶黄夹着甘沙咸蛋黄，微波炉里加热3-5秒奶黄刚好从心化开，掰开月饼真的流奶黄！蛋和奶的调配均衡度很好，口感一流！
+                        </div>
                     </div>
-                    <div class="description">
-                        双重烘焗，浓滑的奶黄夹着甘沙咸蛋黄，微波炉里加热3-5秒奶黄刚好从心化开，掰开月饼真的流奶黄！蛋和奶的调配均衡度很好，口感一流！
+                    <div class="cake-detail cake-detail-3">
+                        <div class="preview-img">
+                            <img src="./img/cake-preview-3.png" alt="">
+                        </div>
+                        <div class="title">
+                            3香港原装美心流心奶黄月饼
+                        </div>
+                        <div class="description">
+                            3双重烘焗，浓滑的奶黄夹着甘沙咸蛋黄，微波炉里加热3-5秒奶黄刚好从心化开，掰开月饼真的流奶黄！蛋和奶的调配均衡度很好，口感一流！
+                        </div>
+                    </div>
+                    <div class="cake-detail cake-detail-4">
+                        <div class="preview-img">
+                            <img src="./img/cake-preview-4.png" alt="">
+                        </div>
+                        <div class="title">
+                            4香港原装美心流心奶黄月饼
+                        </div>
+                        <div class="description">
+                            4双重烘焗，浓滑的奶黄夹着甘沙咸蛋黄，微波炉里加热3-5秒奶黄刚好从心化开，掰开月饼真的流奶黄！蛋和奶的调配均衡度很好，口感一流！
+                        </div>
+                    </div>
+                    <div class="cake-detail cake-detail-5">
+                        <div class="preview-img">
+                            <img src="./img/cake-preview-5.png" alt="">
+                        </div>
+                        <div class="title">
+                            5香港原装美心流心奶黄月饼
+                        </div>
+                        <div class="description">
+                            5双重烘焗，浓滑的奶黄夹着甘沙咸蛋黄，微波炉里加热3-5秒奶黄刚好从心化开，掰开月饼真的流奶黄！蛋和奶的调配均衡度很好，口感一流！
+                        </div>
                     </div>
                     <div class="btn-share"></div>
                 </div>
