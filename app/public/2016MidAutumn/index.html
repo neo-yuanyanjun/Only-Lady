@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="target-densitydpi=device-dpi,width=640,user-scalable=0" />
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/iscroll.js"></script>
+    <script src="./js/zepto.min.js"></script>
     <script src="./js/index.js"></script>
 </head>
 <body>
@@ -13,9 +15,19 @@
     </div>
     <div class="main">
         <div class="module-loading">
-            <div class="wrapper-moons">
-                <img src="./img/loading.png" alt="">
-                <span class="wrapper-percent">20%</span>
+            <div class="line"></div>
+            <div class="moon moon-1"></div>
+            <div class="moon moon-2"></div>
+            <div class="moon moon-3"></div>
+            <div class="moon moon-4"></div>
+            <div class="moon moon-5"></div>
+            <span class="wrapper-percent">20%</span>
+            <div class="wrapper-svg">
+                <svg width="560" height="700" xmlns="http://www.w3.org/2000/svg">
+                    <image id="character" xlink:href="./img/character2.png" x="0" y="0" width="60px" height="56px"/>
+                    <animateMotion xlink:href="#character" path="M-10 570 Q0 450 20 550 Q25 420 50 530 Q90 360 90 460 Q100 450 130 460 Q145 430 190 440 Q200 310 250 420 Q270 340 300 450 Q 320 350 340 460 Q360 380 380 480 Q395 380 410 460 Q430 350 450 520 Q460 390 480 550 Q500 410 500 565" begin="0s" dur="10s" rotate="false" repeatCount="1" fill="freeze"/>
+                   <!-- //  <path d="M-10 570 Q0 450 20 550 Q25 420 50 530 Q70 360 90 460 Q100 450 130 460 Q145 430 190 440 Q200 310 250 420 Q270 340 300 450 Q 320 350 340 460 Q360 380 380 480 Q395 380 410 460 Q430 350 450 520 Q460 390 480 550 Q500 410 500 565" stroke="#cd0000" stroke-width="2" fill="none" /> -->
+                </svg>
             </div>
         </div>
         <div class="module-guide">
@@ -36,6 +48,70 @@
                 <div class="btn-help"></div>
             </div>
         </div>
+        <div class="module-cakes">
+            <div id="wrapper-scroller">
+                <div id="scroller">
+                    <ul>
+                        <li><img src="./img/cake-1.png" alt=""></li>
+                        <li><img src="./img/cake-2.png" alt=""></li>
+                        <li><img src="./img/cake-3.png" alt=""></li>
+                        <li><img src="./img/cake-4.png" alt=""></li>
+                        <li><img src="./img/cake-5.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="arrow-left"></div>
+            <div class="arrow-right"></div>
+            <div class="wrapper-btn">
+                <div class="btn-select"></div>
+            </div>
+        </div>
+        <div class="module-detail">
+            <div class="wrapper-eat">
+                <img src="./img/eat.png" alt="">
+            </div>
+            <div class="wrapper-result">
+                <img src="./img/result-1.png" alt="">
+            </div>
+            <div class="wrapper-detail">
+                <div class="circle"></div>
+                <div class="ticket-text">
+                    <img src="./img/ticket-text-1.png" alt="">
+                </div>
+                <div class="preview-img">
+                    <img src="./img/cake-preview-1.png" alt="">
+                </div>
+                <div class="title">
+                    香港原装美心流心奶黄月饼
+                </div>
+                <div class="description">
+                    双重烘焗，浓滑的奶黄夹着甘沙咸蛋黄，微波炉里加热3-5秒奶黄刚好从心化开，掰开月饼真的流奶黄！蛋和奶的调配均衡度很好，口感一流！
+                </div>
+                <div class="btn-share"></div>
+            </div>
+            <div class="wrapper-again"></div>
+        </div>
+        <div class="module-share-guide"></div>
+        <div class="module-share-success">
+            <div class="wrapper-success">
+                <div class="btn-close"></div>
+                <div class="btn-use"></div>
+            </div>
+        </div>
+        <div class="module-cover">
+            <div class="wrapper-cover">
+                <img src="./img/cover.png" alt="">
+            </div>
+        </div>
     </div>
+    <script>
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        let myScroll = new IScroll('#wrapper-scroller', {
+            scrollX: true,
+            scrollY: false,
+            momentum: false,
+            snap: 'li'
+        });
+    </script>
 </body>
 </html>

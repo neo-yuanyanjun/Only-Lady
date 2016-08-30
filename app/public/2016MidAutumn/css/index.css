@@ -27,20 +27,14 @@ body {
 
 html, body {
     width: 100%;
-    height: 100%;
     background-color: #a39de7;
+    overflow-x: hidden;
 }
 img {
     vertical-align: top;
 }
 
 .module-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
     z-index: 0;
 }
 .module-bg img {
@@ -49,10 +43,11 @@ img {
 }
 
 .main {
-    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    overflow: hidden;
-    position: relative;
+    z-index: 1;
 }
 
 .module-loading {
@@ -60,28 +55,9 @@ img {
     height: 100%;
     position: absolute;
     z-index: 1;
-    display: none;
+    /*display: none;*/
 }
-.module-loading .wrapper-moons {
-    width: 561px;
-    position: relative;
-    margin: 431px auto 0 auto;
-    text-align: center;
-}
-.module-loading .wrapper-moons img {
-    /*position: absolute;
-    left: 0;
-    top: 0;*/
-    width: 100%;
-}
-.module-loading .wrapper-moons .wrapper-percent {
-    vertical-align: top;
-    font-size: 48px;
-    display: block;
-    position: absolute;
-    top: 205px;
-    width: 100%;
-}
+
 
 .module-guide {
     position: absolute;
@@ -126,7 +102,7 @@ img {
     height: 100%;
     z-index: 1;
     overflow: hidden;
-    /*display: none;*/
+    display: none;
 }
 .module-bueaty .wrapper-image {
     margin-left: 66px;
@@ -145,4 +121,282 @@ img {
     width: 470px;
     height: 99px;
     background: url(../img/btn-help.png) no-repeat center top transparent;
+}
+
+.module-cakes {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+.module-cakes #wrapper-scroller {
+    position: relative;
+    width: 100%;
+    height: 770px;
+    overflow: hidden;
+    left: 0;
+    margin-top: 172px;
+}
+.module-cakes #wrapper-scroller #scroller {
+    position: absolute;
+    width: 3200px;
+}
+.module-cakes #wrapper-scroller #scroller ul {
+    width: 100%;
+}
+.module-cakes #wrapper-scroller #scroller ul li {
+    float: left;
+    width: 640px;
+    text-align: center;
+}
+.module-cakes .arrow-left, .module-cakes .arrow-right {
+    position: absolute;
+    top: 516px;
+    left: 25px;
+    width: 39px;
+    height: 69px;
+    background: url(../img/arrows.png) no-repeat left center transparent;
+}
+.module-cakes .arrow-right {
+    background-position: right center;
+    left: auto;
+    right: 25px;
+}
+.module-cakes .wrapper-btn {
+    margin-top: 14px;
+    text-align: center;
+}
+.module-cakes .wrapper-btn .btn-select {
+    vertical-align: top;
+    display: inline-block;
+    height: 99px;
+    width: 470px;
+    background: url(../img/btn-select.png) no-repeat center center transparent;
+}
+
+
+.module-detail {
+    display: none;
+}
+.module-detail .wrapper-eat {
+    margin-top: 150px;
+    text-align: center;
+}
+.module-detail .wrapper-result {
+    margin-top: 24px;
+    text-align: center;
+}
+.module-detail .wrapper-detail {
+    position: relative;
+    margin: 78px auto 0 auto;
+    width: 422px;
+    height: 631px;
+    background: url(../img/bg-preview.png) no-repeat center top transparent;
+}
+.module-detail .wrapper-detail .circle {
+    left: 50%;
+    top: 0;
+    margin-left: -53px;
+    margin-top: -53px;
+    position: absolute;
+    width: 106px;
+    height: 106px;
+    background: url(../img/circle-1.png) no-repeat center top transparent;
+}
+.module-detail .wrapper-detail .ticket-text {
+    padding-top: 68px;
+    text-align: center;
+}
+.module-detail .wrapper-detail .preview-img {
+    margin-top: 30px;
+    height: 222px;
+    text-align: center;
+    overflow: hidden;
+}
+.module-detail .wrapper-detail .preview-img img {
+    max-height: 223px;
+}
+.module-detail .wrapper-detail .title {
+    line-height: 1;
+    font-size: 24px;
+    color: #bc8b0a;
+    text-align: center;
+}
+.module-detail .wrapper-detail .description {
+    width: 380px;
+    margin: 18px auto 0 auto;
+    font-style: 18px;
+    line-height: 26px;
+    color: #bdad82;
+}
+.module-detail .wrapper-detail .btn-share {
+    position: absolute;
+    left: 50%;
+    margin-left: -174px;
+    top: 525px;
+    width: 349px;
+    height: 74px;
+    background: url(../img/btn-share.png) no-repeat center center transparent;
+}
+.module-detail .wrapper-again {
+    margin: 48px auto 0;
+    width: 271px;
+    height: 35px;
+    background: url(../img/again.png) no-repeat center top transparent;
+}
+
+
+.module-share-guide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: url(../img/guide-share.png) no-repeat 134px 97px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+
+.module-share-success {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.module-share-success .wrapper-success {
+    height: 339px;
+    width: 434px;
+    position: absolute;
+    left: 102px;
+    top: 386px;
+    background: url(../img/success.png) no-repeat left top transparent;
+}
+.module-share-success .wrapper-success .btn-close {
+    width: 82px;
+    height: 82px;
+    background: url(../img/btn-close.png) no-repeat center center transparent;
+    position: absolute;
+    top: -20px;
+    right: -12px;
+}
+.module-share-success .wrapper-success .btn-use {
+    position: absolute;
+    width: 360px;
+    height: 77px;
+    background: url(../img/btn-use.png) no-repeat center center transparent;
+    top: 214px;
+    left: 38px;
+}
+
+.module-cover {
+    text-align: center;
+    display: none;
+}
+.module-cover .wrapper-cover {
+    margin-top: 168px;
+}
+
+
+
+
+
+
+
+.module-loading .line {
+    position: absolute;
+    left: 84px;
+    top: 474px;
+    background: url(../img/loading2.png) no-repeat left top transparent;
+    height: 175px;
+    width: 484px;
+}
+.module-loading .moon {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    background: url(../img/moons.png) no-repeat left top transparent;
+    opacity: 0.2;
+}
+.module-loading .moon-1 {
+    left: 47px;
+    top: 600px;
+    background-position: 0px 0px;
+    opacity: 1;
+}
+.module-loading .moon-2 {
+    left: 132px;
+    top: 484px;
+    background-position: -68px 0px;
+}
+.module-loading .moon-3 {
+    left: 292px;
+    top: 440px;
+    background-position: -136px 0px;
+}
+.module-loading .moon-4 {
+    left: 456px;
+    top: 484px;
+    background-position: -204px 0px;
+}
+.module-loading .moon-5 {
+    left: 540px;
+    top: 600px;
+    background-position: -272px 0px;
+}
+.module-loading .wrapper-percent {
+    left: 274px;
+    top: 640px;
+    font-size: 48px;
+    display: block;
+    position: absolute;
+}
+.module-loading .character {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url(../img/character.png) no-repeat center center transparent;
+}
+.module-loading .wrapper-svg {
+    position: absolute;
+    left: 47px;
+    top: 0;
+}
+.module-loading .moon-2 {
+    -webkit-animation: moonShow 0.2s linear 2s 1 forwards;
+    animation: moonShow 0.2s linear 2s 1 forwards;
+}
+.module-loading .moon-3 {
+    -webkit-animation: moonShow 0.2s linear 4s 1 forwards;
+    animation: moonShow 0.2s linear 4s 1 forwards;
+}
+.module-loading .moon-4 {
+    -webkit-animation: moonShow 0.2s linear 7.5s 1 forwards;
+    animation: moonShow 0.2s linear 7.5s 1 forwards;
+}
+.module-loading .moon-5 {
+    -webkit-animation: moonShow 0.2s linear 10s 1 forwards;
+    animation: moonShow 0.2s linear 10s 1 forwards;
+}
+@-webkit-keyframes moonShow {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes moonShow {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
