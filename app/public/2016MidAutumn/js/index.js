@@ -77,6 +77,9 @@ $(document).ready(function () {
             height: $(document).height()
         }).show();
     });
+    $('.module-share-guide').on('tap', function () {
+        $(this).hide();
+    });
     $('.module-detail .wrapper-again').on('tap', function () {
         $('.module-detail').removeClass('show');
         $('.module-cakes').addClass('show');
