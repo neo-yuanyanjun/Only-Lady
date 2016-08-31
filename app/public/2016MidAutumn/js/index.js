@@ -38,7 +38,7 @@ $(document).ready(function () {
     $('#myTemplate').remove();
 
 
-    $('.module-guide').on('tap', function () {
+    $('.module-guide').on('swipe', function () {
         // $(this).remove();
         $(this).removeClass('show');
         $('.module-prologue').addClass('show');
