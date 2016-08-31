@@ -4,11 +4,12 @@
  */
 
 $(document).ready(function () {
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     /**
      * 加载百分比
      */
     var $percent = $('.wrapper-percent');
-    var durantion = 10 * 1000;
+    var durantion = 1 * 1000;
     var start = new Date().getTime();
     var timer = setInterval(function () {
         var now = new Date().getTime();
@@ -38,7 +39,7 @@ $(document).ready(function () {
     $('#myTemplate').remove();
 
 
-    $('.module-guide').on('swipe', function () {
+    $('.module-guide').on('tap', function () {
         // $(this).remove();
         $(this).removeClass('show');
         $('.module-prologue').addClass('show');
@@ -91,7 +92,6 @@ $(document).ready(function () {
         momentum: false,
         snap: 'li'
     });
-    // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 });
 
 function showSuccessDialog() {
@@ -104,7 +104,7 @@ function showSuccessDialog() {
         $('.module-share-success').hide();
         $('.module-detail').removeClass('show');
         $('.module-cover').show();
-    }, 1 * 1000);
+    }, 10 * 1000);
 
     $('.module-share-success .btn-close').unbind().on('tap', function () {
         timer && clearInterval(timer);
@@ -114,6 +114,4 @@ function showSuccessDialog() {
         timer && clearInterval(timer);
         // 使用优惠券逻辑
     });
-
-    
 }
