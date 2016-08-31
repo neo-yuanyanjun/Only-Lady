@@ -47,7 +47,6 @@ function init() {
 
 
     $('.module-guide').on('tap', function () {
-        // $(this).remove();
         $(this).removeClass('show');
         $('.module-prologue').addClass('show');
         setTimeout(function () {
@@ -104,24 +103,63 @@ function init() {
     });
 }
 
-function showSuccessDialog() {
-    $('.module-share-success').css({
-        width: '100%',
-        height: $(document).height()
-    }).show();
+/**
+ * 分享成功回调函数
+ */
+function shareSuccessCallback() {
+    $('.module-detail .wrapper-detail .btn-share').hide();
+    $('.module-detail .wrapper-detail .btn-get-coupon')
+        .show()
+        .off()
+        .on('tap', function () {
+            // 这里可以写获取优惠券的逻辑
+        });
+}
 
+/**
+ * 领取优惠券成功回调函数
+ */
+function getCouponSucessCallback() {
     var timer = setTimeout(function () {
-        $('.module-share-success').hide();
+        $('.module-get-coupon-success').hide();
         $('.module-detail').removeClass('show');
         $('.module-cover').show();
     }, 10 * 1000);
 
-    $('.module-share-success .btn-close').unbind().on('tap', function () {
+    $('.module-get-coupon-success').css({
+        width: '100%',
+        height: $(document).height()
+    }).show();
+
+    $('.module-get-coupon-success .btn-close').unbind().on('tap', function () {
         timer && clearInterval(timer);
-        $('.module-share-success').hide();
-    });
-    $('.module-share-success .btn-use').unbind().on('tap', function () {
-        timer && clearInterval(timer);
-        // 使用优惠券逻辑
+        $('.module-get-coupon-success').hide();
     });
 }
+
+/**
+ * 领取优惠券失败回调函数
+ */
+function getCouponFailCallback() {
+    var timer = setTimeout(function () {
+        $('.module-get-coupon-fail').hide();
+        $('.module-detail').removeClass('show');
+        $('.module-cover').show();
+    }, 10 * 1000);
+
+    $('.module-get-coupon-fail').css({
+        width: '100%',
+        height: $(document).height()
+    }).show();
+
+    $('.module-get-coupon-fail .btn-close').unbind().on('tap', function () {
+        timer && clearInterval(timer);
+        $('.module-get-coupon-fail').hide();
+    });
+}
+
+
+
+
+
+

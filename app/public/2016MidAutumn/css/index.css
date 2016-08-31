@@ -752,6 +752,16 @@ img {
     height: 74px;
     background: url(../img/btn-share.png) no-repeat center center transparent;
 }
+.module-detail .wrapper-detail .btn-get-coupon {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -174px;
+    top: 525px;
+    width: 349px;
+    height: 74px;
+    background: url(../img/btn-get-coupon.png) no-repeat center center transparent;
+}
 .module-detail .wrapper-again {
     position: absolute;
     left: 178px;
@@ -775,7 +785,7 @@ img {
 }
 
 
-.module-share-success {
+.module-get-coupon-success {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -785,7 +795,7 @@ img {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
 }
-.module-share-success .wrapper-success {
+.module-get-coupon-success .wrapper-success {
     height: 339px;
     width: 434px;
     position: absolute;
@@ -793,7 +803,7 @@ img {
     top: 386px;
     background: url(../img/success.png) no-repeat left top transparent;
 }
-.module-share-success .wrapper-success .btn-close {
+.module-get-coupon-success .wrapper-success .btn-close {
     width: 82px;
     height: 82px;
     background: url(../img/btn-close.png) no-repeat center center transparent;
@@ -801,7 +811,7 @@ img {
     top: -20px;
     right: -12px;
 }
-.module-share-success .wrapper-success .btn-use {
+.module-get-coupon-success .wrapper-success .btn-use {
     position: absolute;
     width: 360px;
     height: 77px;
@@ -809,6 +819,44 @@ img {
     top: 214px;
     left: 38px;
 }
+
+
+.module-get-coupon-fail {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.module-get-coupon-fail .wrapper-fail {
+    height: 339px;
+    width: 434px;
+    position: absolute;
+    left: 102px;
+    top: 386px;
+    background: url(../img/fail.png) no-repeat left top transparent;
+}
+.module-get-coupon-fail .wrapper-fail .btn-close {
+    width: 82px;
+    height: 82px;
+    background: url(../img/btn-close.png) no-repeat center center transparent;
+    position: absolute;
+    top: -20px;
+    right: -12px;
+}
+.module-get-coupon-fail .wrapper-fail .btn-browser {
+    display: block;
+    position: absolute;
+    width: 360px;
+    height: 77px;
+    background: url(../img/btn-browser.png) no-repeat center center transparent;
+    top: 214px;
+    left: 38px;
+}
+
 
 .module-cover {
     text-align: center;
