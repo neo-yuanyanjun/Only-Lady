@@ -45,7 +45,7 @@ $(document).ready(function () {
         setTimeout(function () {
             $('.module-prologue').removeClass('show');
             $('.module-beauty').addClass('show');
-        }, 6 * 1000);
+        }, 5 * 1000);
     });
 
 
