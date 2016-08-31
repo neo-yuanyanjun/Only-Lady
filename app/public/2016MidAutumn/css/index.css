@@ -306,7 +306,7 @@ img {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     z-index: 1;
     display: none;
 }
@@ -339,20 +339,32 @@ img {
 }
 
 .module-prologue.show .text-1 {
-    -webkit-animation: aprologue-fade-in 1s linear 0s 1 forwards;
-    animation: prologue-fade-in 1s linear 0s 1 forwards;
+    /*-webkit-animation: aprologue-fade-in 1s linear 0s 1 forwards;
+    animation: prologue-fade-in 1s linear 0s 1 forwards;*/
+    opacity: 1;
+    -webkit-transition: opacity 1s linear 0s;
+    transition: opacity 1s linear 0s;
 }
 .module-prologue.show .text-2 {
-    -webkit-animation: aprologue-fade-in 1s linear 1s 1 forwards;
-    animation: prologue-fade-in 1s linear 1s 1 forwards;
+    /*-webkit-animation: aprologue-fade-in 1s linear 1s 1 forwards;
+    animation: prologue-fade-in 1s linear 1s 1 forwards;*/
+    opacity: 1;
+    -webkit-transition: all 1s linear 1s;
+    transition: all 1s linear 1s;
 }
 .module-prologue.show .text-3 {
-    -webkit-animation: aprologue-fade-in 1s linear 2s 1 forwards;
-    animation: prologue-fade-in 1s linear 2s 1 forwards;
+    /*-webkit-animation: aprologue-fade-in 1s linear 2s 1 forwards;
+    animation: prologue-fade-in 1s linear 2s 1 forwards;*/
+    opacity: 1;
+    -webkit-transition: all 1s linear 2s;
+    transition: all 1s linear 2s;
 }
 .module-prologue.show .text-4 {
-    -webkit-animation: aprologue-fade-in 1s linear 3s 1 forwards;
-    animation: prologue-fade-in 1s linear 3s 1 forwards;
+    /*-webkit-animation: aprologue-fade-in 1s linear 3s 1 forwards;
+    animation: prologue-fade-in 1s linear 3s 1 forwards;*/
+    opacity: 1;
+    -webkit-transition: all 1s linear 3s;
+    transition: all 1s linear 3s;
 }
 
 @-webkit-keyframes prologue-fade-in {

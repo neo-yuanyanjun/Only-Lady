@@ -8,7 +8,7 @@ $(document).ready(function () {
      * 加载百分比
      */
     var $percent = $('.wrapper-percent');
-    var durantion = 10 * 1000;
+    var durantion = 1 * 1000;
     var start = new Date().getTime();
     var timer = setInterval(function () {
         var now = new Date().getTime();
@@ -38,9 +38,9 @@ $(document).ready(function () {
     $('#myTemplate').remove();
 
 
-    $('.module-guide').on('swipe', function () {
-        console.log('swipe');
-        $(this).remove();
+    $('.module-guide').on('tap', function () {
+        // $(this).remove();
+        $(this).removeClass('show');
         $('.module-prologue').addClass('show');
         setTimeout(function () {
             $('.module-prologue').removeClass('show');
