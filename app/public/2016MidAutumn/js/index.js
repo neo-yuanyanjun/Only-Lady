@@ -5,11 +5,22 @@
 
 $(document).ready(function () {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-    /**
-     * 加载百分比
-     */
+});
+
+$(window).on('load', function () {
+    animateLoading();
+    init();
+});
+
+function animateLoading() {
+    // svg 动画
+    var myAnimateMotion = document.getElementById('myAnimateMotion');
+    myAnimateMotion.setAttribute('xlink:href', '#character');
+    // 月亮动画
+    $('.module-loading').addClass('animate');
+    // 数字动画
     var $percent = $('.wrapper-percent');
-    var durantion = 10 * 1000;
+    var durantion = 11 * 1000;
     var start = new Date().getTime();
     var timer = setInterval(function () {
         var now = new Date().getTime();
@@ -24,17 +35,13 @@ $(document).ready(function () {
         percent = Math.min(percent, 100);
         $percent.html(percent + '%');
     }, 100);
+}
 
-    /**
-     * 生成两个整数之间的随机整数
-     */
-    function rand(min, max) {
-        return min + Math.floor(Math.random() * (max - min));
-    }
+function rand(min, max) {
+    return min + Math.floor(Math.random() * (max - min));
+}
 
-    /**
-     * 模板
-     */
+function init() {
     $('body').append($('#myTemplate').html());
     $('#myTemplate').remove();
 
@@ -95,7 +102,7 @@ $(document).ready(function () {
         momentum: false,
         snap: 'li'
     });
-});
+}
 
 function showSuccessDialog() {
     $('.module-share-success').css({

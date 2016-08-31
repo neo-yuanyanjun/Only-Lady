@@ -121,19 +121,19 @@ img {
     left: 47px;
     top: 0;
 }
-.module-loading .moon-2 {
+.module-loading.animate .moon-2 {
     -webkit-animation: moonShow 0.2s linear 2s 1 forwards;
     animation: moonShow 0.2s linear 2s 1 forwards;
 }
-.module-loading .moon-3 {
+.module-loading.animate .moon-3 {
     -webkit-animation: moonShow 0.2s linear 4s 1 forwards;
     animation: moonShow 0.2s linear 4s 1 forwards;
 }
-.module-loading .moon-4 {
+.module-loading.animate .moon-4 {
     -webkit-animation: moonShow 0.2s linear 7.5s 1 forwards;
     animation: moonShow 0.2s linear 7.5s 1 forwards;
 }
-.module-loading .moon-5 {
+.module-loading.animate .moon-5 {
     -webkit-animation: moonShow 0.2s linear 10s 1 forwards;
     animation: moonShow 0.2s linear 10s 1 forwards;
 }
