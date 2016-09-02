@@ -46,7 +46,8 @@ function init() {
     $('#myTemplate').remove();
 
 
-    $('.module-guide').on('tap', function () {
+    // $('.module-guide').on('tap', function () {
+    $('.module-guide').on('click', function () {
         $(this).removeClass('show');
         $('.module-prologue').addClass('show');
         setTimeout(function () {
