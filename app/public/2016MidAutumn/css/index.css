@@ -196,9 +196,9 @@ img {
 
 .module-guide.show .text-yong {
     -webkit-animation: animate-yong 1s linear 0s 1 forwards,
-        swing-yong 3s linear 1s infinite alternate none;
+        swing-yong 5s linear 1s infinite alternate none;
     animation: animate-yong 1s linear 0s 1 forwards,
-        swing-yong 3s linear 1s infinite alternate none;
+        swing-yong 5s linear 1s infinite alternate none;
 }
 @-webkit-keyframes animate-yong {
     0% {
@@ -224,9 +224,9 @@ img {
 }
 .module-guide.show .text-bao {
     -webkit-animation: animate-bao 1s linear 0s 1 forwards,
-        swing-bao 3s linear 1s infinite alternate none;
+        swing-bao 5s linear 1s infinite alternate none;
     animation: animate-bao 1s linear 0s 1 forwards,
-        swing-bao 3s linear 1s infinite alternate none;
+        swing-bao 5s linear 1s infinite alternate none;
 }
 @-webkit-keyframes animate-bao {
     0% {
@@ -252,9 +252,9 @@ img {
 }
 .module-guide.show .text-ba {
     -webkit-animation: animate-ba 1s linear 0s 1 forwards,
-        swing-ba 3s linear 1s infinite alternate none;
+        swing-ba 5s linear 1s infinite alternate none;
     animation: animate-ba 1s linear 0s 1 forwards,
-        swing-ba 3s linear 1s infinite alternate none;
+        swing-ba 5s linear 1s infinite alternate none;
 }
 @-webkit-keyframes animate-ba {
     0% {
