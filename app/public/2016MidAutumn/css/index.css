@@ -196,9 +196,9 @@ img {
 
 .module-guide.show .text-yong {
     -webkit-animation: animate-yong 1s linear 0s 1 forwards,
-        swing-yong 0.5s linear 1s infinite alternate none;
+        swing-yong 2s linear 1s infinite alternate none;
     animation: animate-yong 1s linear 0s 1 forwards,
-        swing-yong 0.5s linear 1s infinite alternate none;
+        swing-yong 2s linear 1s infinite alternate none;
 }
 @-webkit-keyframes animate-yong {
     0% {
@@ -224,9 +224,9 @@ img {
 }
 .module-guide.show .text-bao {
     -webkit-animation: animate-bao 1s linear 0s 1 forwards,
-        swing-bao 0.5s linear 1s infinite alternate none;
+        swing-bao 2s linear 1s infinite alternate none;
     animation: animate-bao 1s linear 0s 1 forwards,
-        swing-bao 0.5s linear 1s infinite alternate none;
+        swing-bao 2s linear 1s infinite alternate none;
 }
 @-webkit-keyframes animate-bao {
     0% {
@@ -252,9 +252,9 @@ img {
 }
 .module-guide.show .text-ba {
     -webkit-animation: animate-ba 1s linear 0s 1 forwards,
-        swing-ba 0.5s linear 1s infinite alternate none;
+        swing-ba 2s linear 1s infinite alternate none;
     animation: animate-ba 1s linear 0s 1 forwards,
-        swing-ba 0.5s linear 1s infinite alternate none;
+        swing-ba 2s linear 1s infinite alternate none;
 }
 @-webkit-keyframes animate-ba {
     0% {
@@ -566,7 +566,8 @@ img {
     position: absolute;
     left: 0;
     /*top: 153px;*/
-    top: 123px;
+    /*top: 123px;*/
+    top: 103px;
 }
 .module-detail.show .wrapper-eat img {
     -webkit-animation: slide-down-fade-in 1s linear 0s 1 alternate none;
@@ -603,7 +604,8 @@ img {
     position: absolute;
     left: 0;
     /*top: 215px;*/
-    top: 170px;
+    /*top: 170px;*/
+    top: 144px;
 }
 .module-detail .wrapper-result img {
     opacity: 0;
@@ -641,7 +643,8 @@ img {
     opacity: 0;
     position: absolute;
     /*top: 353px;*/
-    top: 300px;
+    /*top: 300px;*/
+    top: 270px;
     left: 109px;
     width: 422px;
     height: 631px;
@@ -681,18 +684,22 @@ img {
     z-index: 0;
     position: absolute;
     left: 0;
-    top: 176px;
+    /*top: 176px;*/
+    top: 156px;
     width: 640px;
     height: 771px;
     background: url(../img/light.png) no-repeat center top transparent;
 }
 .module-detail.show .light {
-    -webkit-animation: light-animate 1s linear 2.5s 1 alternate forwards;
-    animation: light-animate 1s linear 2.5s 1 alternate forwards;
+    -webkit-animation: light-animate 1s linear 3s 1 alternate forwards;
+    animation: light-animate 1s linear 3s 1 alternate forwards;
 }
 @-webkit-keyframes light-animate {
     0% {
         opacity: 0;
+    }
+    65% {
+        opacity: 0.3;
     }
     100% {
         opacity: 1;
@@ -701,6 +708,9 @@ img {
 @keyframes light-animate {
     0% {
         opacity: 0;
+    }
+    65% {
+        opacity: 0.3;
     }
     100% {
         opacity: 1;
