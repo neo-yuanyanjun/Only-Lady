@@ -47,7 +47,7 @@ function init() {
 
 
     // $('.module-guide').on('tap', function () {
-    $('.module-guide').on('click', function () {
+    $('.module-guide').on('swipeUp', function () {
         $(this).removeClass('show');
         $('.module-prologue').addClass('show');
         setTimeout(function () {
