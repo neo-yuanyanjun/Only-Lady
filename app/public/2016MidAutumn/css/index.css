@@ -880,7 +880,42 @@ img {
 }
 
 
+#player {
+    display: none;
+}
+.btn-play {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    z-index: 10000;
+    background: url(../img/play.png) no-repeat center center transparent;
+    background-size: 100% 100%;
+}
 
 
-
-
+.rotate {
+    -webkit-animation: rotate 5s linear 0s infinite alternate forwards;
+    animation: rotate 5s linear 0s infinite alternate forwards;
+}
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}

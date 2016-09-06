@@ -5,6 +5,19 @@
 
 $(document).ready(function () {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+    // 播放器
+    var player = document.getElementById('player');
+    var $btnPlay = $('.btn-play');
+    $btnPlay.on('tap', function () {
+        player.paused ? player.play() :  player.pause();
+    });
+    player.addEventListener('play', function () {
+        $btnPlay.addClass('rotate');
+    }, false);
+    player.addEventListener('pause', function () {
+        $btnPlay.removeClass('rotate');
+    }, false);
 });
 
 $(window).on('load', function () {
