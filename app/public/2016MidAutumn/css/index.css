@@ -847,7 +847,8 @@ img {
     position: absolute;
     left: 102px;
     top: 386px;
-    background: url(../img/fail.png) no-repeat left top transparent;
+    /*background: url(../img/fail.png) no-repeat left top transparent;*/
+    background: url(../img/fail2.png) no-repeat left top transparent;
 }
 .module-get-coupon-fail .wrapper-fail .btn-close {
     width: 82px;
@@ -862,7 +863,8 @@ img {
     position: absolute;
     width: 360px;
     height: 77px;
-    background: url(../img/btn-browser.png) no-repeat center center transparent;
+    /*background: url(../img/btn-browser.png) no-repeat center center transparent;*/
+    background: url(../img/btn-ordering.png) no-repeat center center transparent;
     top: 214px;
     left: 38px;
 }
