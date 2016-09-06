@@ -66,7 +66,7 @@ function init() {
         setTimeout(function () {
             $('.module-prologue').removeClass('show');
             $('.module-beauty').addClass('show');
-        }, 5 * 1000);
+        }, 4 * 1000);
     });
 
 

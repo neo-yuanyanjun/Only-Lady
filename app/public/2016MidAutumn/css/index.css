@@ -195,10 +195,10 @@ img {
 }
 
 .module-guide.show .text-yong {
-    -webkit-animation: animate-yong 1s linear 0s 1 forwards,
-        swing-yong 5s linear 1s infinite alternate none;
-    animation: animate-yong 1s linear 0s 1 forwards,
-        swing-yong 5s linear 1s infinite alternate none;
+    -webkit-animation: animate-yong 0.6s linear 0s 1 forwards,
+        swing-yong 5s linear 0.6s infinite alternate none;
+    animation: animate-yong 0.6s linear 0s 1 forwards,
+        swing-yong 5s linear 0.6s infinite alternate none;
 }
 @-webkit-keyframes animate-yong {
     0% {
@@ -223,10 +223,10 @@ img {
     }
 }
 .module-guide.show .text-bao {
-    -webkit-animation: animate-bao 1s linear 0s 1 forwards,
-        swing-bao 5s linear 1s infinite alternate none;
-    animation: animate-bao 1s linear 0s 1 forwards,
-        swing-bao 5s linear 1s infinite alternate none;
+    -webkit-animation: animate-bao 0.6s linear 0s 1 forwards,
+        swing-bao 5s linear 0.6s infinite alternate none;
+    animation: animate-bao 0.6s linear 0s 1 forwards,
+        swing-bao 5s linear 0.6s infinite alternate none;
 }
 @-webkit-keyframes animate-bao {
     0% {
@@ -251,10 +251,10 @@ img {
     }
 }
 .module-guide.show .text-ba {
-    -webkit-animation: animate-ba 1s linear 0s 1 forwards,
-        swing-ba 5s linear 1s infinite alternate none;
-    animation: animate-ba 1s linear 0s 1 forwards,
-        swing-ba 5s linear 1s infinite alternate none;
+    -webkit-animation: animate-ba 0.6s linear 0s 1 forwards,
+        swing-ba 5s linear 0.6s infinite alternate none;
+    animation: animate-ba 0.6s linear 0s 1 forwards,
+        swing-ba 5s linear 0.6s infinite alternate none;
 }
 @-webkit-keyframes animate-ba {
     0% {
@@ -279,8 +279,8 @@ img {
     }
 }
 .module-guide.show .text-tuanyuan {
-    -webkit-animation: animate-tuanyuan 0.2s linear 1s 1 forwards;
-    animation: animate-tuanyuan 0.2s linear 1s 1 forwards;
+    -webkit-animation: animate-tuanyuan 0.2s linear 0.6s 1 forwards;
+    animation: animate-tuanyuan 0.2s linear 0.6s 1 forwards;
 }
 @-webkit-keyframes animate-tuanyuan {
     0% {
@@ -351,30 +351,30 @@ img {
 }
 
 .module-prologue.show .text-1 {
-    -webkit-animation: prologue-fade-in 1s linear 0s 1 forwards;
-    animation: prologue-fade-in 1s linear 0s 1 forwards;
+    -webkit-animation: prologue-fade-in 0.8s linear 0s 1 forwards;
+    animation: prologue-fade-in 0.8s linear 0s 1 forwards;
     /*opacity: 1;
     transition: all 1s linear 0s;
     -webkit-transition: all 1s linear 0s;*/
     
 }
 .module-prologue.show .text-2 {
-    -webkit-animation: prologue-fade-in 1s linear 1s 1 forwards;
-    animation: prologue-fade-in 1s linear 1s 1 forwards;
+    -webkit-animation: prologue-fade-in 0.8s linear 0.8s 1 forwards;
+    animation: prologue-fade-in 0.8s linear 0.8s 1 forwards;
     /*opacity: 1;
     -webkit-transition: all 1s linear 1s;
     transition: all 1s linear 1s;*/
 }
 .module-prologue.show .text-3 {
-    -webkit-animation: prologue-fade-in 1s linear 2s 1 forwards;
-    animation: prologue-fade-in 1s linear 2s 1 forwards;
+    -webkit-animation: prologue-fade-in 0.8s linear 1.6s 1 forwards;
+    animation: prologue-fade-in 0.8s linear 1.6s 1 forwards;
     /*opacity: 1;
     -webkit-transition: all 1s linear 2s;
     transition: all 1s linear 2s;*/
 }
 .module-prologue.show .text-4 {
-    -webkit-animation: prologue-fade-in 1s linear 3s 1 forwards;
-    animation: prologue-fade-in 1s linear 3s 1 forwards;
+    -webkit-animation: prologue-fade-in 0.8s linear 2.4s 1 forwards;
+    animation: prologue-fade-in 0.8s linear 2.4s 1 forwards;
     /*opacity: 1;
     -webkit-transition: all 1s linear 3s;
     transition: all 1s linear 3s;*/
@@ -570,8 +570,8 @@ img {
     top: 103px;
 }
 .module-detail.show .wrapper-eat img {
-    -webkit-animation: slide-down-fade-in 1s linear 0s 1 alternate none;
-    animation: slide-down-fade-in 1s linear 0s 1 alternate none;
+    -webkit-animation: slide-down-fade-in 0.5s linear 0s 1 alternate none;
+    animation: slide-down-fade-in 0.5s linear 0s 1 alternate none;
 }
 @-webkit-keyframes slide-down-fade-in {
     0% {
@@ -611,8 +611,8 @@ img {
     opacity: 0;
 }
 .module-detail.show .wrapper-result img {
-    -webkit-animation: result-scale 1s linear 1.5s 1 alternate forwards;
-    animation: result-scale 1s linear 1.5s 1 alternate forwards;
+    -webkit-animation: result-scale 0.5s linear 1s 1 alternate forwards;
+    animation: result-scale 0.5s linear 1s 1 alternate forwards;
 }
 @-webkit-keyframes result-scale {
     0% {
@@ -651,8 +651,8 @@ img {
     background: url(../img/bg-preview.png) no-repeat center top transparent;
 }
 .module-detail.show .wrapper-detail {
-    -webkit-animation: cake-detail-animate 1s linear 2.5s 1 alternate forwards;
-    animation: cake-detail-animate 1s linear 2.5s 1 alternate forwards;
+    -webkit-animation: cake-detail-animate 0.5s linear 1.5s 1 alternate forwards;
+    animation: cake-detail-animate 0.5s linear 1.5s 1 alternate forwards;
 }
 @-webkit-keyframes cake-detail-animate {
     0% {
@@ -691,8 +691,8 @@ img {
     background: url(../img/light.png) no-repeat center top transparent;
 }
 .module-detail.show .light {
-    -webkit-animation: light-animate 1s linear 3s 1 alternate forwards;
-    animation: light-animate 1s linear 3s 1 alternate forwards;
+    -webkit-animation: light-animate 0.5s linear 1.8s 1 alternate forwards;
+    animation: light-animate 0.5s linear 1.8s 1 alternate forwards;
 }
 @-webkit-keyframes light-animate {
     0% {
