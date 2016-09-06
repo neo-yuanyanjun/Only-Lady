@@ -741,17 +741,35 @@ img {
     max-height: 223px;
 }
 .module-detail .wrapper-detail .title {
-    line-height: 1;
+    /*line-height: 1;*/
+    line-height: 30px;
     font-size: 24px;
     color: #bc8b0a;
     text-align: center;
 }
+.module-detail .wrapper-detail .title .bold {
+    font-size: 28px;
+}
 .module-detail .wrapper-detail .description {
-    width: 380px;
-    margin: 18px auto 0 auto;
-    font-style: 18px;
+    text-align: right;
+    padding-top: 14px;
+    /*width: 380px;*/
+    width: 350px;
+    /*margin: 18px auto 0 auto;*/
+    margin: 10px auto 0 auto;
+    /*font-style: 18px;*/
+    font-size: 18px;
     line-height: 26px;
     color: #bdad82;
+}
+.module-detail .wrapper-detail .description .cart {
+    margin-left: 20px;
+    margin-top: -14px;
+    float: right;
+    width: 76px;
+    height: 76px;
+    background: url(../img/cart.png) no-repeat center center transparent;
+    background-size: 100% 100%;
 }
 .module-detail .wrapper-detail .btn-share {
     position: absolute;
