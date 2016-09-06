@@ -123,9 +123,9 @@ function shareSuccessCallback() {
 function getCouponSucessCallback() {
     var timer = setTimeout(function () {
         $('.module-get-coupon-success').hide();
-        $('.module-detail').removeClass('show');
+        $('.module-detail').hide().removeClass('show');
         $('.module-cover').show();
-    }, 10 * 1000);
+    }, 5 * 1000);
 
     $('.module-get-coupon-success').css({
         width: '100%',
@@ -134,6 +134,7 @@ function getCouponSucessCallback() {
 
     $('.module-get-coupon-success .btn-close').unbind().on('tap', function () {
         timer && clearInterval(timer);
+        $('.module-detail').show().addClass('show');
         $('.module-get-coupon-success').hide();
     });
 }
@@ -144,9 +145,9 @@ function getCouponSucessCallback() {
 function getCouponFailCallback() {
     var timer = setTimeout(function () {
         $('.module-get-coupon-fail').hide();
-        $('.module-detail').removeClass('show');
+        $('.module-detail').hide().removeClass('show');
         $('.module-cover').show();
-    }, 10 * 1000);
+    }, 5 * 1000);
 
     $('.module-get-coupon-fail').css({
         width: '100%',
@@ -155,6 +156,7 @@ function getCouponFailCallback() {
 
     $('.module-get-coupon-fail .btn-close').unbind().on('tap', function () {
         timer && clearInterval(timer);
+        $('.module-detail').show().addClass('show');
         $('.module-get-coupon-fail').hide();
     });
 }
