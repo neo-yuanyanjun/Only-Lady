@@ -183,7 +183,30 @@ html, body {
     z-index: 2;
 }
 .module-unlock-screen .svg-container svg {
+    opacity: 1;
     position: absolute;
     left: 0;
     top: 0;
+}
+
+
+.animate-shine {
+    -webkit-animation: animate-shine 0.5s linear 0s infinite alternate none;
+    animation: animate-shine 0.5s linear 0s infinite alternate none;
+}
+@-webkit-keyframes animate-shine {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes swing-shine {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

@@ -40,7 +40,7 @@
     // 一个前景svg
     // 用户是在前景svg上划线
     // 用户每次划线时，都清空整个前景svg上的path，更新balls列表，然后重新画
-    function linkBalls(balls, svgEle, lineColor) {
+    function linkBalls(balls, svgEle, color) {
         if (!balls || !balls.length) {
             return;
         }
@@ -52,20 +52,23 @@
             circle.setAttribute('cy', ball.y);
             circle.setAttribute('r', 8);
             circle.setAttribute('stroke-width', 0);
-            circle.setAttribute('fill', '#fff');
+            circle.setAttribute('fill', color);
             circle.setAttribute('fill-opacity', 0.4);
             svgEle.appendChild(circle);
         });
 
         var ball = null;
-        var fisrtBall = balls.shift();
+        var fisrtBall = balls[0];
         var pathData = 'M' + fisrtBall.x + ' ' + fisrtBall.y + ' ';
-        while (ball = balls.shift()) {
+        var index = 1;
+        while (index < balls.length) {
+            ball = balls[index];
             pathData += 'L' + ball.x + ' ' + ball.y + ' ';
+            index++;
         }
         var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('d', pathData);
-        path.setAttribute('stroke', '#fff');
+        path.setAttribute('stroke', color);
         path.setAttribute('stroke-width', 5);
         path.setAttribute('stroke-opacity', 0.4);
         path.setAttribute('fill', 'none');
@@ -97,7 +100,9 @@
         ball.draw(bgSvg);
     });
 
-    linkBalls([balls[0], balls[1], balls[2], balls[4], balls[6]], bgSvg, 'rgba(255, 255, 255, 0.4)');
+    // 成功解锁的形状
+    var successUnlockBalls = [balls[0], balls[1], balls[2], balls[4], balls[6]];
+    linkBalls(successUnlockBalls, bgSvg, '#fff');
 
     // 前景
     var frSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -105,5 +110,36 @@
     frSvg.setAttribute("width",'100%');
     svgContainer.appendChild(frSvg);
 
+    // 手势触碰到的球
+    var touchedBalls = [];
+    $('body').on('touchmove', function (evt) {
+        var touch = evt.touches[0];
+        var pageX = touch.pageX;
+        var pageY = touch.pageY;
+        var currentBall = _.find(balls, function(ball) {
+            return Math.sqrt(Math.pow(ball.x - pageX, 2) + Math.pow(ball.y - pageY, 2)) < ball.radius;
+        });
+        if (currentBall && !_.contains(touchedBalls, currentBall)) {
+            touchedBalls.push(currentBall);
+            linkBalls(touchedBalls, frSvg, '#2aff00');
+        }
+    });
+
+    $('body').on('touchend', function () {
+        if (_.isEqual(touchedBalls, successUnlockBalls)) {
+            window.alert('解锁成功');
+            $(frSvg).addClass('animate-blink');
+        }
+        else {
+            setTimeout(function () {
+                clearTouchPath();
+            }, 200);
+        }
+    });
+
+    function clearTouchPath() {
+        touchedBalls = [];
+        frSvg.innerHTML = '';
+    }
 
 })(window);
