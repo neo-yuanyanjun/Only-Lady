@@ -34,3 +34,156 @@ html, body {
     overflow-x: hidden;
 }
 
+.hide {
+    display: none;
+}
+
+.main,
+.module {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.module-lock-screen {
+    background: url(../img/bg-lock-screen.jpg) no-repeat center center transparent;
+    background-size: 100% 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+}
+.module-lock-screen .time {
+    margin-top: 84px;
+    font-size: 86px;
+}
+.module-lock-screen .date-day {
+    margin-top: 16px;
+    font-size: 24px;
+}
+.module-lock-screen .date-day .date {
+    margin-right: 56px;
+}
+.module-lock-screen .enjoy-life {
+    margin-top: 40px;
+    font-size: 34px;
+}
+.wrapper-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.wrapper-bottom .phone {
+    width: 41px;
+    height: 39px;
+    background: url(../img/icon-phone.png) no-repeat center center transparent;
+    bottom: 26px;
+    left: 30px;
+    position: absolute;
+}
+.wrapper-bottom .camera {
+    width: 45px;
+    height: 33px;
+    background: url(../img/icon-camera.png) no-repeat center center transparent;
+    bottom: 26px;
+    right: 30px;
+    position: absolute;
+} 
+.wrapper-bottom .hint-slide-up {
+    width: 90px;
+    height: 30px;
+    background: url(../img/icon-up.png) no-repeat center center transparent;
+    bottom: 46px;
+    left: 50%;
+    margin-left: -45px;
+    position: absolute;
+}
+.module-lock-screen .wrapper-add-friend-requests {
+    margin-top: 2px;
+    margin-left: 30px;
+}
+.module-lock-screen .request-detail {
+    text-align: left;
+    overflow: hidden;
+    height: 132px;
+    border-bottom: 1px solid #aecdca;
+}
+.module-lock-screen .request-detail:last-child {
+    border-bottom: none;
+}
+.module-lock-screen .request-detail .head {
+    width: 52px;
+    height: 52px;
+    float: left;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.module-lock-screen .request-detail .head img {
+    width: 100%;
+    height: 100%;
+}
+.module-lock-screen .request-detail .name {
+    font-size: 28px;
+    margin-top: 34px;
+    margin-left: 84px;
+    font-weight: bold;
+}
+.module-lock-screen .request-detail .msg {
+    margin-top: 12px;
+    font-size: 22px;
+    margin-left: 84px;
+}
+
+.module-unlock-screen {
+    background: url(../img/bg-lock-screen.jpg) no-repeat center center transparent;
+    background-size: 100% 100%;
+    color: #fff;
+    line-height: 1;
+    position: relative;
+    text-align: center;
+}
+
+.module-unlock-screen .wrapper-user-head {
+    /*margin: 116px auto 0 auto;*/
+    margin: 40px auto 0 auto;
+    width: 198px;
+    height: 198px;
+    border: 2px solid #9bc4c6;
+    border-radius: 50%;
+}
+.module-unlock-screen .wrapper-user-head .img-container {
+    width: 174px;
+    height: 174px;
+    border: 4px solid #fff;
+    margin: 8px 0 0 8px;
+    background-color: #55cdff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.module-unlock-screen .wrapper-user-head .img-container img {
+    width: 100%;
+    height: 100%;
+}
+.module-unlock-screen .wrapper-username {
+    margin-top: 32px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.module-unlock-screen .wrapper-hint {
+    margin-top: 20px;
+    font-size: 28px;
+    opacity: 0.8;
+}
+.module-unlock-screen .svg-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.module-unlock-screen .svg-container svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

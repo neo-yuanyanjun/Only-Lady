@@ -4,5 +4,7 @@
  */
 
 $(document).ready(function () {
-
-};
+    $('body').on('touchmove', function (evt) {
+        evt.preventDefault();
+    });
+});
