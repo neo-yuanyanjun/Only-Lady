@@ -97,9 +97,18 @@ html, body {
     margin-left: -45px;
     position: absolute;
 }
+.module-lock-screen {
+    position: relative;
+}
 .module-lock-screen .wrapper-add-friend-requests {
-    margin-top: 2px;
-    margin-left: 30px;
+    /*margin-top: 2px;
+    margin-left: 30px;*/
+    position: absolute;
+    left: 30px;
+    top: 286px;
+    right: 0;
+    bottom: 100px;
+    overflow: hidden;
 }
 .module-lock-screen .request-detail {
     text-align: left;
@@ -209,4 +218,90 @@ html, body {
     100% {
         opacity: 0;
     }
+}
+
+.module-chat {
+    font-size: 24px;
+    color: #333333;
+    background-color: #ececec;
+    position: relative;
+}
+
+.module-chat .wrapper-message-list {
+    position: absolute;
+    bottom: 86px;
+    /*top: 4px;*/
+    top: 28px;
+    left: 0;
+    width: 100%;
+
+}
+.module-chat .message-item {
+    /*margin-top: 24px;*/
+    padding-bottom: 24px;
+}
+.module-chat .message-item .message-head {
+    float: left;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-left: 14px;
+}
+.module-chat .message-item .wrapper-message-content {
+    margin-left: 100px;
+    margin-right: 118px;
+    position: relative;
+}
+.module-chat .message-item .message-content {
+    float: left;
+    max-width: 100%;
+    color: #333;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 18px 14px;
+    border: 2px solid #c4c4c4;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.module-chat .message-item .message-hint {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    z-index: 2;
+    left: -8px;
+    top: 28px;
+    background: url(../img/icon-message-hint.png) no-repeat left center transparent;
+}
+
+.module-chat .message-item.my-message .message-head {
+    float: right;
+    margin-left: 0;
+    margin-right: 14px;
+}
+.module-chat .message-item.my-message .wrapper-message-content {
+    margin-right: 100px;
+    margin-left: 118px;
+}
+.module-chat .message-item.my-message .message-content {
+    float: right;
+    background-color: #a7d758;
+}
+.module-chat .message-item.my-message .message-hint {
+    left: auto;
+    right: -8px;
+    background-position: right center;
+}
+.module-chat .wrapper-input-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 86px;
+}
+.module-chat .wrapper-input-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+.module-chat .message-item.image-message .wrapper-message-content img {
+    min-height: 131px;
 }

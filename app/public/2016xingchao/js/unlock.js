@@ -138,7 +138,7 @@
             setTimeout(function () {
                 destoryUnlockScreenPage();
                 goToNextPage();
-            }, 2000);
+            }, 1000);
         }
         else {
             clearTouchPath();
@@ -160,11 +160,19 @@
 
     function clearTouchPath() {
         touchedBalls = [];
+        // 这个写法在微信浏览器上不正常工作
         frSvg.innerHTML = '';
+        // backup方案
+        var childNodes = frSvg.childNodes;
+        var length = childNodes.length;
+        while(length--) {
+            frSvg.removeChild(childNodes[length]);
+        }
     }
 
     function goToNextPage() {
         $('.module-unlock-screen').hide();
         $('.module-chat').show();
+        app.initChatPage();
     }
 })(window);

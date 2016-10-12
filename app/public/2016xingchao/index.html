@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+    <audio id="player" src="./img/ring.mp3">
+        <source src="./img/ring.mp3" type="audio/mpeg" />
+    </audio>
     <div class="main">
         <div class="module module-lock-screen">
             <div class="time">10:25</div>
@@ -16,49 +19,8 @@
             </div>
             <div class="enjoy-life">悦享品质</div>
             <div class="wrapper-add-friend-requests">
-                <div class="request-detail">
-                    <div class="head">
-                        <img src="./img/head-zhangqishan.png" alt="">
-                    </div>
-                    <div class="name">
-                        张大佛爷
-                    </div>
-                    <div class="msg">
-                        请求添加你为朋友
-                    </div>
-                </div>
-                <div class="request-detail">
-                    <div class="head">
-                        <img src="./img/head-eryuehong.png" alt="">
-                    </div>
-                    <div class="name">
-                        二月红
-                    </div>
-                    <div class="msg">
-                        请求添加你为朋友
-                    </div>
-                </div>
-                <div class="request-detail">
-                    <div class="head">
-                        <img src="./img/head-dalaoshi.png" alt="">
-                    </div>
-                    <div class="name">
-                        大老师
-                    </div>
-                    <div class="msg">
-                        请求添加你为朋友
-                    </div>
-                </div>
-                <div class="request-detail">
-                    <div class="head">
-                        <img src="./img/head-yuxiaoer.png" alt="">
-                    </div>
-                    <div class="name">
-                        余小二
-                    </div>
-                    <div class="msg">
-                        请求添加你为朋友
-                    </div>
+                <div class="requests-list">
+                    
                 </div>
             </div>
             <div class="wrapper-bottom">
@@ -73,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="module module-unlock-screen">
+        <div class="module module-unlock-screen hide">
             <div class="wrapper-user-head">
                 <div class="img-container">
                     <img src="" alt="">
@@ -95,17 +57,27 @@
             </div>
             <div class="svg-container"></div>
         </div>
-        <div class="module module-chat">
-            聊天界面
+        <div class="module module-chat hide">
+            <div class="wrapper-message-list">
+                <div class="message-list">
+                    
+                </div>
+            </div>
+            <div class="wrapper-input-wrapper">
+                <img src="./img/input-empty.png" alt="">
+            </div>
         </div>
     </div>
+    <script src="./js/q.min.js"></script>
     <script src="./js/iscroll.js"></script>
     <script src="./js/underscore-min.js"></script>
     <script src="./js/zepto.min.js"></script>
     <script src="./js/zepto.touch.js"></script>
 
     <script src="./js/index.js"></script>
+
     <script src="./js/lock.js"></script>
     <script src="./js/unlock.js"></script>
+    <script src="./js/chat.js"></script>
 </body>
 </html>
