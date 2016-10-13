@@ -18,9 +18,9 @@
 
     // 发送一条消息，返回一个promise对象
     app.sendMessage = function (msgObj, tpl, container, noBgm/* 是否有背景音乐 */, interval) {
-        return Q.Promise(function(resolve, reject, notify) {
+        return Q.Promise(function (resolve, reject, notify) {
             // 每隔两秒插入一条消息
-            setTimeout(function() {
+            setTimeout(function () {
                 var error = null;
                 try {
                     !noBgm && app.player.play();
@@ -73,7 +73,7 @@
 
         var promise = app.sendMessage(messages[0], tpl, container, noBgm, interval);
 
-        for(var i = 1, length = messages.length; i < length; i++) {
+        for (var i = 1, length = messages.length; i < length; i++) {
             promise = promise.then(_.bind(function (index) {
                 // 这里一定要记得加 return 语句，否则这个串联 的promise就断了
                 return app.sendMessage(messages[index], tpl, container, noBgm, interval);
@@ -82,14 +82,17 @@
 
         return promise;
     };
+
+    app.preventScroll = function (evt) {
+        evt.preventDefault();
+    };
 })(window);
 
 
 
 $(document).ready(function () {
-    $('body').on('touchmove', function (evt) {
-        evt.preventDefault();
-    });
+    $('body').on('touchmove', window.app.preventScroll);
 
-    app.initLockScreenPage();
+    // app.initLockScreenPage();
+    window.app.initSharesPage();
 });

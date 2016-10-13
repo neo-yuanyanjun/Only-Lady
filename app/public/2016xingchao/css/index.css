@@ -305,3 +305,139 @@ html, body {
 .module-chat .message-item.image-message .wrapper-message-content img {
     min-height: 131px;
 }
+
+
+
+.module-shares {
+    background-color: #f8f8f8;
+}
+.module-shares .wrapper-bg {
+    width: 100%;
+    height: 478px;
+    position: relative;
+}
+.module-shares .wrapper-bg img {
+    width: 100%;
+    height: 100%;
+}
+.module-shares .wrapper-bg .name {
+    line-height: 1;
+    color: #fff;
+    position: absolute;
+    font-size: 24px;
+    right: 192px;
+    top: 428px;
+}
+.module-shares .wrapper-bg .head {
+    height: 142px;
+    width: 142px;
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid #cbcbcb;
+    position: absolute;
+    right: 22px;
+    top: 390px;
+}
+
+
+.module-shares .wrapper-shares-list {
+    padding-top: 66px;
+}
+.module-shares .share-item {
+    margin-top: 24px;
+    border-bottom: 2px solid #dcdcdc;
+    padding-bottom: 20px;
+}
+.module-shares .share-item .head {
+    float: left;
+    margin-left: 20px;
+    width: 76px;
+    height: 76px;
+}
+.module-shares .share-item .head img {
+    width: 100%;
+    height: 100%;
+}
+.module-shares .share-item .details {
+    margin-left: 106px;
+    margin-right: 20px;
+}
+.module-shares .share-item .details .main-name {
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    color: #44567a;
+}
+.module-shares .share-item .details .wrapper-text {
+    line-height: 32px;
+    font-size: 26px;
+    color: #333333;
+}
+.module-shares .share-item .details .wrapper-images {
+    margin-top: 16px;
+}
+.module-shares .share-item .details .wrapper-images img {
+    max-width: 100%;
+}
+.module-shares .share-item .details .position {
+    margin-top: 22px;
+    font-size: 20px;
+    color: #6d6d6d;
+}
+.module-shares .share-item .details .wrapper-time-opration {
+    margin-top: 20px;
+}
+.module-shares .share-item .details .wrapper-time-opration .time {
+    float: left;
+    line-height: 1;
+    font-size: 20px;
+    color: #a1a1a1;
+}
+.module-shares .share-item .details .wrapper-time-opration .opration-btn {
+    float: right;
+    width: 43px;
+    height: 31px;
+    overflow: hidden;
+    background: url(../img/icon-like-comment.png) no-repeat center -1px transparent;
+    /*background-size: 100% 100%;*/
+}
+.module-shares .share-item .details .wrapper-likes-comments {
+    margin-top: 16px;
+    background-color: #eeeeee;
+    /*padding: 16px;*/
+    position: relative;
+}
+.module-shares .share-item .details .wrapper-likes-comments:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: -10px;
+    width: 26px;
+    height: 10px;
+    background: url(../img/icon-triangle.png) no-repeat center center transparent;
+}
+.module-shares .share-item .details .wrapper-likes-comments .likes {
+    /*height: 56px;*/
+    /*height: 26px;*/
+    line-height: 1;
+    color: #44567a;
+    font-size: 26px;
+    border-bottom: 2px solid #dcdcdc;
+    padding-top: 16px;
+    padding-left: 46px;
+    padding-bottom: 16px;
+    background: url(../img/icon-heart.png) no-repeat 16px 18px transparent;
+}
+.module-shares .share-item .details .wrapper-likes-comments .comments {
+    margin-left: 16px;
+    margin-right: 50px;
+    color: #3a3a3a;
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+.module-shares .share-item .details .wrapper-likes-comments .comments span {
+    color: #51688d;
+}
