@@ -93,7 +93,8 @@
     // 前景svg
     var frSvg = null;
 
-    app.initUnlockScreenPage = function () {
+    function init () {
+        initUserInfo();
         var svgContainer = $('.module-unlock-screen .svg-container')[0];
         // 背景svg
         bgSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -171,8 +172,17 @@
     }
 
     function goToNextPage() {
-        $('.module-unlock-screen').hide();
-        $('.module-chat').show();
         app.initChatPage();
+    }
+
+    function initUserInfo () {
+        $('.module-unlock-screen .wrapper-username').html(app.userInfo.name);
+        $('.module-unlock-screen .wrapper-user-head img').attr('src', app.userInfo.head);
+    }
+
+    app.initUnlockScreenPage = function () {
+        $('.module').hide();
+        $('.module-unlock-screen').show();
+        init();
     }
 })(window);

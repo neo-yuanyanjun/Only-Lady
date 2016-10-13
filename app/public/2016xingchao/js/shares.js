@@ -157,7 +157,8 @@
             head: './img/head-hongren.png',
             name: 'i红人圈',
             text: '到奇秀、美拍、一直播关注i红人圈，直播红人带你升职加薪，当上总经理，赢取白富美，<img src="./img/face-10.png" alt="" />走上人生巅峰',
-            image: './img/share-img-10.png',
+            // image: './img/share-img-10.png',
+            image: '',
             position: '',
             time: '2小时前',
             likes: '爱奇艺商城',
@@ -183,7 +184,7 @@
     ];
 
     var templateStr = [
-        '<div class="share-item clearfix">',
+        '<div class="share-item clearfix" data-id="<%= id %>">',
             '<div class="head">',
                 '<img src="<%= head %>" alt="">',
             '</div>',
@@ -193,18 +194,24 @@
                     '<%= text %>',
                 '</div>',
                 '<div class="wrapper-images">',
-                    '<img src="<%= image %>" alt="">',
+                    '<img src="<%= image %>" data-id="<%= id %>" alt="">',
                 '</div>',
                 '<% if (!!position) { %>',
                 '<div class="position"><%= position %></div>',
                 '<% } %>',
                 '<div class="wrapper-time-opration clearfix">',
                     '<div class="time"><%= time %></div>',
-                    '<div class="opration-btn" data-id="<%= id %>"></div>',
+                    '<div class="opration-btn"></div>',
+                    '<div class="wrapper-layer">',
+                        '<div class="wrapper-btns">',
+                            '<div class="btn-like"  data-id="<%= id %>">赞</div>',
+                            '<div class="btn-comment">评论</div>',
+                        '</div>',
+                    '</div>',
                 '</div>',
                 '<div class="wrapper-likes-comments">',
                     '<% if (likes) { %>',
-                    '<div class="likes"><%= likes %></div>',
+                    '<div class="likes" data-id="<%= id %>"><%= likes %></div>',
                     '<% } %>',
                     '<div class="comments">',
                         '<% for(var i = 0, length = comments.length; i < length; i++) { %>',
@@ -229,25 +236,101 @@
 
     // 点赞功能
     function initLike() {
-        var likes = window.localStorage.getItem('likes');
-        $('.opration-btn').on('click', function () {
+        $('.opration-btn').on('tap', function (e) {
+            e.stopPropagation();
+            $(this).siblings('.wrapper-layer').toggleClass('expand');
+        });
 
+        $('body').on('tap', function (e) {
+            $('.wrapper-layer.expand').removeClass('expand');
+        });
+
+        $('.wrapper-btns .btn-like').on('tap', function (e) {
+            var likes = (window.localStorage.getItem('likes') || '').split(',');
+            var $this  =$(this);
+            var id = $this.attr('data-id');
+
+            var likesHtml = (_.find(shares, function (shareCon) {
+                return shareCon.id === +id;
+            }) || {}).likes;
+
+            if (_.contains(likes, id)) {
+                likes = _.without(likes, id);
+                $this.html('赞');
+                $this.parents('.share-item').find('.likes').html(likesHtml);
+            }
+            else {
+                likes = _.union(likes, [id]);
+                $this.html('取消');
+                $this.parents('.share-item').find('.likes').html(likesHtml + ',' + app.userInfo.name);
+            }
+            likes = _.uniq(likes);
+            likes = _.filter(likes, function (id) {
+                return !!id;
+            });
+            window.localStorage.setItem('likes', likes.join(','));
+        });
+
+        // 初始化
+        var mylikes = (window.localStorage.getItem('likes') || '').split(',');
+        _.each(mylikes, function (id) {
+            var html = (_.find(shares, function (shareCon) {
+                return shareCon.id === +id;
+            }) || {}).likes;
+            $('.shares-list .btn-like[data-id="' + id + '"]').html('取消');
+            $('.shares-list .likes[data-id="' + id + '"]').html(html + ',' + app.userInfo.name);
         });
     }
 
+    function initImageClick() {
+        $('.share-item .wrapper-images img[data-id="' + 9 + '"]').on('tap', function () {
+            // TODO 显示直播页面
+            // app.initLivePage();
+        });
+    }
+
+    function initQRcode() {
+        $('.share-item[data-id="' + 10 + '"] .wrapper-images').html([
+            '<img src="./img/QRcode-1.png" alt="" style="margin-right: 6px;" />',
+            '<img src="./img/QRcode-2.png" alt="" />'
+        ].join(''));
+    }
+
+
+    function initUserInfo() {
+        $('.module-shares .wrapper-bg .name').html(app.userInfo.name);
+        $('.module-shares .wrapper-bg .head img').attr('src', app.userInfo.head);
+    }
+
+    function initLinks() {
+        // 直播
+        $('.share-item[data-id="' + 9 + '"] .wrapper-images img').wrap('<a href="' + app.liveUrl + '"></a>');
+        // 爱奇艺商城
+        $('.share-item[data-id="' + 11 + '"] .wrapper-images img').wrap('<a href="' + app.mallIqiyiUrl + '"></a>');
+    }
+
+    function initHash() {
+        window.location.hash = 'shares';
+    }
+
     app.initSharesPage = function () {
+        initUserInfo();
         renderShareLists(shares, templateStr);
 
         $('.module').hide();
-        $('.module-shares').show().css('height', 'auto');
+        $('.module-shares').show();
 
-        $('body').off('touchmove', window.app.preventScroll)
-            .css('height', 'auto');
+        $('body').off('touchmove', app.preventScroll);
+        // TODO 这里可能会有问题，需要测试兼容性
+        $('html, body, .main, .module-shares').css('height', 'auto');
 
         initLike();
 
-        // test
-        // $('.module-shares').css('margin-top', '-600px');
-        // window.alert(window.localStorage);
+        initImageClick();
+
+        initQRcode();
+
+        initLinks();
     };
+
 })(window);

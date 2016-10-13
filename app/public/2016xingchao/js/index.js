@@ -10,11 +10,43 @@
 
     app.userInfo = {
         // 从微信获取的用户头像和用户名
-        head: '',
-        name: ''
+        head: 'http://img6.bdstatic.com/img/image/smallpic/chongwu1014.jpg',
+        name: '用户名字'
     };
 
+    // 视频直播的地址
+    app.liveUrl = 'http://www.meipai.com/media/582707501';
+    // 爱奇艺商城的地址
+    app.mallIqiyiUrl = 'http://mall.iqiyi.com/';
+
+
+
+
+
     app.player = document.getElementById('player');
+
+    app.sendMessageImmediately = function (msgObj, tpl, container, noBgm) {
+        !noBgm && app.player.play();
+        // 发送消息
+        var compiled = _.template(tpl);
+        var htmlStr = compiled(msgObj);
+
+        var $container = $(container);
+        $container.append(htmlStr);
+
+        var $parent = $container.parent();
+
+        var parentHeight = $parent.height();
+        var containerHeight = $container.height();
+        if (parentHeight < containerHeight) {
+            var transition = 'margin-top 0.4s linear 0s';
+            $container.css({
+                'transition': transition,
+                '-webkit-transition': transition,
+                'margin-top': parentHeight - containerHeight + 'px'
+            });
+        }
+    };
 
     // 发送一条消息，返回一个promise对象
     app.sendMessage = function (msgObj, tpl, container, noBgm/* 是否有背景音乐 */, interval) {
@@ -23,32 +55,7 @@
             setTimeout(function () {
                 var error = null;
                 try {
-                    !noBgm && app.player.play();
-                    // 发送消息
-                    var compiled = _.template(tpl);
-                    var htmlStr = compiled(msgObj);
-
-                    var $container = $(container);
-                    $container.append(htmlStr);
-
-                    var $parent = $container.parent();
-
-                    var parentHeight = $parent.height();
-                    var containerHeight = $container.height();
-                    if (parentHeight < containerHeight) {
-                        var transition = 'margin-top ' + Math.min(400, interval || 2000) / 1000 + 's linear 0s';
-                        $container.css({
-                            'transition': transition,
-                            '-webkit-transition': transition,
-                            'margin-top': parentHeight - containerHeight + 'px'
-                        });
-
-                        // var containerEle = $container.get(0);
-                        // containerEle.style.WebkitTransition = transition;
-                        // containerEle.style.MozTransition = transition;
-                        // containerEle.style.transition = transition;
-                        // containerEle.style.marginTop = parentHeight - containerHeight + 'px';
-                    }
+                    app.sendMessageImmediately(msgObj, tpl, container, noBgm);
                 }
                 catch (err) {
                     error = err;
@@ -93,6 +100,21 @@
 $(document).ready(function () {
     $('body').on('touchmove', window.app.preventScroll);
 
-    // app.initLockScreenPage();
-    window.app.initSharesPage();
+
+    switch (window.location.hash) {
+        case '#shares':
+            window.app.initSharesPage();
+            break;
+        case '#chat':
+            window.app.initChatPage();
+            break;
+        case '#unlock':
+            window.app.initUnlockScreenPage();
+            break;
+        case '#lock':
+            window.app.initLockScreenPage();
+            break;
+        default:
+            window.app.initLockScreenPage();
+    }
 });

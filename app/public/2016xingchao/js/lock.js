@@ -43,6 +43,7 @@
     ].join('');
 
     app.initLockScreenPage = function () {
+        $('.module').hide();
         $('.module-lock-screen').show();
 
         app.sendMessages(requests, temp, $('.module-lock-screen .requests-list'))

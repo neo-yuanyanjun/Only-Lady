@@ -44,6 +44,9 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+.module {
+    display: none;
+}
 .module-lock-screen {
     background: url(../img/bg-lock-screen.jpg) no-repeat center center transparent;
     background-size: 100% 100%;
@@ -278,6 +281,10 @@ html, body {
     margin-left: 0;
     margin-right: 14px;
 }
+.module-chat .message-item.my-message .message-head img {
+    width: 100%;
+    height: 100%;
+}
 .module-chat .message-item.my-message .wrapper-message-content {
     margin-right: 100px;
     margin-left: 118px;
@@ -291,14 +298,14 @@ html, body {
     right: -8px;
     background-position: right center;
 }
-.module-chat .wrapper-input-wrapper {
+.module-chat .wrapper-input-area {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 86px;
 }
-.module-chat .wrapper-input-wrapper img {
+.module-chat .wrapper-input-area img {
     width: 100%;
     height: 100%;
 }
@@ -386,6 +393,7 @@ html, body {
 }
 .module-shares .share-item .details .wrapper-time-opration {
     margin-top: 20px;
+    position: relative;
 }
 .module-shares .share-item .details .wrapper-time-opration .time {
     float: left;
@@ -401,6 +409,49 @@ html, body {
     background: url(../img/icon-like-comment.png) no-repeat center -1px transparent;
     /*background-size: 100% 100%;*/
 }
+
+.module-shares .share-item .details .wrapper-time-opration .wrapper-layer {
+    position: absolute;
+    width: 0px;
+    overflow: hidden;
+    right: 58px;
+    top: -24px;
+    z-index: 2;
+    transition: width 0.3s linear;
+}
+.module-shares .share-item .details .wrapper-time-opration .wrapper-layer.expand {
+    width: 342px;
+}
+.module-shares .share-item .details .wrapper-time-opration .wrapper-layer .wrapper-btns {
+    width: 340px;
+    height: 70px;
+    border: 1px solid #262d2e;
+    background-color: #333b3c;
+    border-radius: 6px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.module-shares .share-item .details .wrapper-time-opration .wrapper-layer .btn-like {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 96px;
+    height: 100%;
+    line-height: 70px;
+    background: url(../img/btn-like.png) no-repeat 54px 20px transparent;
+}
+.module-shares .share-item .details .wrapper-time-opration .wrapper-layer .btn-comment {
+    float: right;
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 78px;
+    height: 100%;
+    line-height: 70px;
+    background: url(../img/btn-comment.png) no-repeat 36px 22px transparent;
+}
+
+
 .module-shares .share-item .details .wrapper-likes-comments {
     margin-top: 16px;
     background-color: #eeeeee;
@@ -440,4 +491,100 @@ html, body {
 }
 .module-shares .share-item .details .wrapper-likes-comments .comments span {
     color: #51688d;
+}
+
+.module-chat .wrapper-typing {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 590px;
+    z-index: 2;
+}
+.module-chat .wrapper-typing img {
+    width: 100%;
+    height: 100%;
+}
+.module-chat .wrapper-typing .hand {
+    position: absolute;
+    width: 71px;
+    height: 86px;
+    right: 0;
+    top: 50px;
+    background: url(../img/hand.png) no-repeat center center transparent;
+    background-size: 100% 100%;
+    z-index: 3;
+    display: none;
+}
+
+.animate-shaking {
+    -webkit-animation: animate-shaking 2s linear 0s infinite alternate none;
+    animation: animate-shaking 2s linear 0s infinite alternate none;
+}
+
+@-webkit-keyframes animate-shaking {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    25% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px);
+    }
+    50% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    75% {
+        -webkit-transform: translate(0, -10px);
+        transform: translate(0, -10px);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, -0);
+    }
+}
+@keyframes animate-shaking {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    25% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px);
+    }
+    50% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    75% {
+        -webkit-transform: translate(0, -10px);
+        transform: translate(0, -10px);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, -0);
+    }
+}
+
+
+
+.module-chat .wrapper-typing {
+    display: none;
+}
+.module-chat .typing-simulation {
+    position: absolute;
+    left: 104px;
+    top: 16px;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 1px;
+}
+.module-chat .typing-simulation .blinking {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    height: 28px;
+    width: 0;
+    border-right: 1px solid #4184de;
 }

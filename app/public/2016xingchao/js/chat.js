@@ -5,7 +5,7 @@
  */
 
 (function (window) {
-    // var _ = window._;
+    var _ = window._;
     var app = window.app || (window.app = {});
 
     var chatMessages = [
@@ -114,8 +114,107 @@
         '</div>'
     ].join('');
 
+    function init() {
+        initUserInfo();
+        app.sendMessages(
+            chatMessages.slice(0, chatMessages.length - 2),
+            messageTemplate,
+            $('.module-chat .message-list')
+        ).then(function () {
+            showKeyBoard();
+        });
+    }
+
+
+    function initUserInfo() {
+        var myMessages = _.filter(chatMessages, function (msg) {
+            return msg.isMyself;
+        });
+        _.each(myMessages, function (msg) {
+            msg.head = app.userInfo.head;
+        });
+    }
+
+    var $inputArea = $('.module-chat .wrapper-input-area');
+    var $typingArea = $('.module-chat .wrapper-typing');
+    var $messageListWrapper = $('.module-chat .wrapper-message-list');
+    var $messageList = $('.module-chat .message-list');
+
+    function showKeyBoard() {
+        $inputArea.hide();
+        $typingArea.show();
+        $messageListWrapper.css('bottom', $typingArea.height());
+        $messageList.css({
+            'margin-top': $messageListWrapper.height() - $messageList.height() + 'px'
+        });
+        startBlink();
+        startTyping();
+    }
+
+    function hideKeyboard() {
+        $inputArea.show();
+        $typingArea.hide();
+        $messageListWrapper.css('bottom', $inputArea.height());
+        $messageList.css({
+            'margin-top': $messageListWrapper.height() - $messageList.height() + 'px'
+        });
+        stopBlink();
+    }
+
+    function startTyping() {
+        var $typing = $('.module-chat .typing');
+        var text = '约什么？去哪儿约？';
+        var offset = 0;
+        var length = text.length;
+        var timer = window.setInterval(function () {
+            $typing.html(text.substr(0, ++offset));
+            if (offset === length) {
+                window.clearInterval(timer);
+                typingEndHandler();
+            }
+        }, 400);
+    }
+
+
+    function typingEndHandler() {
+        var $hand = $('.module-chat .wrapper-typing .hand');
+        $hand.show().addClass('animate-shaking');
+        $hand.on('tap', function () {
+            hideKeyboard();
+            var $messageList = $('.module-chat .message-list');
+            app.sendMessageImmediately(
+                chatMessages[chatMessages.length - 2],
+                messageTemplate,
+                $messageList
+            );
+            window.setTimeout(function () {
+                app.sendMessageImmediately(
+                    chatMessages[chatMessages.length - 1],
+                    messageTemplate,
+                    $messageList
+                );
+            }, 2000);
+            window.setTimeout(function () {
+                app.initSharesPage();
+            }, 4000);
+        });
+    }
+
+    var blinkTimer = null;
+    function startBlink() {
+        var $ele = $('.module-chat .blinking');
+        blinkTimer = window.setInterval(function () {
+            $ele.toggleClass('hide');
+        }, 400);
+    }
+
+    function stopBlink() {
+        window.clearInterval(blinkTimer);
+    }
+
     app.initChatPage = function () {
-        app.sendMessages(chatMessages, messageTemplate, $('.module-chat .message-list'));
-        // TODO 加上用户输入的交互事件
+        $('.module').hide();
+        $('.module-chat').show();
+        init();
     };
 })(window);
