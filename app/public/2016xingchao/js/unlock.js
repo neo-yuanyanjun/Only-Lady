@@ -94,6 +94,7 @@
     var frSvg = null;
 
     function init () {
+        app.setTitle('滑"7"解锁');
         initUserInfo();
         var svgContainer = $('.module-unlock-screen .svg-container')[0];
         // 背景svg

@@ -90,6 +90,11 @@
         return promise;
     };
 
+    app.setTitle = function (title) {
+        $('head title').html(title);
+        document.title = title;
+    };
+
     app.preventScroll = function (evt) {
         evt.preventDefault();
     };
