@@ -331,6 +331,8 @@
         initQRcode();
 
         initLinks();
+
+        initHash();
     };
 
 })(window);

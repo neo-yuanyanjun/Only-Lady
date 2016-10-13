@@ -275,7 +275,9 @@ html, body {
     top: 28px;
     background: url(../img/icon-message-hint.png) no-repeat left center transparent;
 }
-
+.module-chat .message-item.image-message .message-hint {
+    display: none;
+}
 .module-chat .message-item.my-message .message-head {
     float: right;
     margin-left: 0;
