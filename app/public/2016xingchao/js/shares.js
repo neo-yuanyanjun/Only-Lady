@@ -247,7 +247,7 @@
 
         $('.wrapper-btns .btn-like').on('tap', function (e) {
             var likes = (window.localStorage.getItem('likes') || '').split(',');
-            var $this  =$(this);
+            var $this = $(this);
             var id = $this.attr('data-id');
 
             var likesHtml = (_.find(shares, function (shareCon) {
@@ -304,7 +304,10 @@
 
     function initLinks() {
         // 直播
-        $('.share-item[data-id="' + 9 + '"] .wrapper-images img').wrap('<a href="' + app.liveUrl + '"></a>');
+        $('.share-item[data-id="' + 9 + '"] .wrapper-images img')
+            .on('tap', function () {
+                app.initLivePage();
+            });
         // 爱奇艺商城
         $('.share-item[data-id="' + 11 + '"] .wrapper-images img').wrap('<a href="' + app.mallIqiyiUrl + '"></a>');
     }

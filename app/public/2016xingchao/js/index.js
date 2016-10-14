@@ -119,6 +119,9 @@ $(document).ready(function () {
         case '#lock':
             window.app.initLockScreenPage();
             break;
+        case '#live':
+            window.app.initLivePage();
+            break;
         default:
             window.app.initLockScreenPage();
     }

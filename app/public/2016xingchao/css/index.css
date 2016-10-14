@@ -593,3 +593,20 @@ html, body {
     width: 0;
     border-right: 1px solid #4184de;
 }
+
+.module-live .wrapper-video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.module-live .btn-close {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 100px;
+    width: 100px;
+    background: url(../img/close.png) no-repeat center center transparent;
+    background-size: 100% 100%;
+}
+

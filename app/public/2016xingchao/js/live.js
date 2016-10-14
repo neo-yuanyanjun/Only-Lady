@@ -6,16 +6,21 @@
 (function (window) {
     var app = window.app || (window.app = {});
 
-    app.initLivePage_backup = function () {
+    app.initLivePage = function () {
         $('html, body, .main').css('height', '100%');
         $('.module').hide();
-        $('meta[name="viewport"]').remove();
-        var width = $(window).width();
-        var height = $(window).height();
-        $('.module-live').show().html('<iframe width="' + width + '" height="' + height + '" src="http://www.meipai.com/media/582707501" frameborder="0"></iframe>');
+        $('.module-live').show()
+            .find('video').attr('src', './img/video.mp4').get(0).play();
+
+        $('.module-live .btn-close').on('tap', function () {
+            app.closeLivePage();
+        });
     };
 
-    app.initLivePage = function () {
-        window.location.href = 'http://www.meipai.com/media/582707501';
-    }
+    app.closeLivePage = function () {
+        $('.module-live video').attr('src', '');
+        $('.module').hide();
+        $('.module-shares').show();
+        $('html, body, .main').css('height', 'auto');
+    };
 })(window);
