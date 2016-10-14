@@ -385,8 +385,8 @@
             image: './img/share-img-09.png',
             images: [
                 {
-                    preview: './img/share-images-pre/01/1.png',
-                    detail: './img/share-images/01/1.png'
+                    preview: './img/share-img-09.png',
+                    detail: ''
                 }
             ],
             position: '',
@@ -403,6 +403,7 @@
             text: '到奇秀、美拍、一直播关注i红人圈，直播红人带你升职加薪，当上总经理，赢取白富美，<img src="./img/face-10.png" alt="" />走上人生巅峰',
             // image: './img/share-img-10.png',
             image: '',
+            images: [],
             position: '',
             time: '2小时前',
             likes: '爱奇艺商城',
@@ -416,6 +417,12 @@
             name: '余小二',
             text: '《余罪》华丽丽的播放量，都是大家的功劳！感谢大家对小二的支持，小二在此给大家发个红包， 以表感谢，谢谢大家，我会继续努力！<img src="./img/face-11.png" alt="" />',
             image: './img/share-img-11.png',
+            images: [
+                {
+                    preview: './img/share-img-11.png',
+                    detail: ''
+                }
+            ],
             position: '',
             time: '2小时前',
             likes: '大胸姐,许平秋,大老师,鹿不羁,潘帅,薛老师,陈白露',
@@ -427,7 +434,6 @@
         }
     ];
 
-    shares = shares.slice(0, 8);
 
     var templateStr = [
         '<div class="share-item clearfix" data-id="<%= id %>">',
@@ -441,7 +447,7 @@
                 '</div>',
                 '<div class="wrapper-images clearfix">',
                     '<% for (var i = 0, length = images.length; i < length; i++) { %>',
-                    '<img src="<%= images[i].preview %>" data-id="<%= id %>" data-detail="<%= images[i].detail %>"  alt="" />',
+                    '<img src="<%= images[i].preview %>" data-id="<%= id %>"  alt="" />',
                     '<% } %>',
                 '</div>',
                 '<% if (!!position) { %>',
@@ -530,12 +536,6 @@
         });
     }
 
-    function initImageClick() {
-        $('.share-item .wrapper-images img[data-id="' + 9 + '"]').on('tap', function () {
-            // TODO 显示直播页面
-            // app.initLivePage();
-        });
-    }
 
     function initQRcode() {
         $('.share-item[data-id="' + 10 + '"] .wrapper-images').html([
@@ -555,14 +555,33 @@
         $('.share-item[data-id="' + 9 + '"] .wrapper-images img')
             .on('tap', function () {
                 app.initLivePage();
+            }).css({
+                width: 'auto',
+                height: 'auto'
             });
         // 爱奇艺商城
-        $('.share-item[data-id="' + 11 + '"] .wrapper-images img').wrap('<a href="' + app.mallIqiyiUrl + '"></a>');
+        $('.share-item[data-id="' + 11 + '"] .wrapper-images img').css({
+            width: 'auto',
+            height: 'auto'
+        }).wrap('<a href="' + app.mallIqiyiUrl + '"></a>');
     }
 
     function initHash() {
         window.location.hash = 'shares';
     }
+
+
+    function initPhotoSwipe() {
+        // 只有前有9组元素才有图片预览功能
+        $('.module-shares .wrapper-images img').filter(function () {
+            var id = $(this).attr('data-id');
+            id = parseInt(id, 10);
+            return id !== 9 && id !== 10 && id !== 11;
+        }).on('tap', function () {
+            alert(1);
+        });
+    }
+
 
     app.initSharesPage = function () {
         initUserInfo();
@@ -577,13 +596,13 @@
 
         initLike();
 
-        initImageClick();
-
         initQRcode();
 
         initLinks();
 
         initHash();
+
+        initPhotoSwipe();
     };
 
 })(window);

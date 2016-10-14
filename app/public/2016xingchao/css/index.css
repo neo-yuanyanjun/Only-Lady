@@ -609,10 +609,13 @@ html, body {
     background: url(../img/close.png) no-repeat center center transparent;
     background-size: 100% 100%;
 }
-
+.module-shares .share-item .details .wrapper-images {
+    margin-top: 10px;
+}
 .module-shares .share-item .details .wrapper-images img {
     width: 152px;
     height: 152px;
     margin-right: 6px;
+    margin-top: 6px;
 }
 
