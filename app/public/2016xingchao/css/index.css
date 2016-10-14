@@ -610,3 +610,9 @@ html, body {
     background-size: 100% 100%;
 }
 
+.module-shares .share-item .details .wrapper-images img {
+    width: 152px;
+    height: 152px;
+    margin-right: 6px;
+}
+

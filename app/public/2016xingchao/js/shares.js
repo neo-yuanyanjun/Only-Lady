@@ -15,6 +15,16 @@
             name: '佛爷',
             text: '我就喜欢大凶！爱奇艺独家定制，勇者无畏，爱我就下单！',
             image: './img/share-img-01.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/01/1.png',
+                    detail: './img/share-images/01/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/01/2.png',
+                    detail: './img/share-images/01/1.jpg'
+                }
+            ],
             position: '湖南 . 长沙',
             time: '5分钟前',
             likes: '九爷,八爷,张副官',
@@ -183,6 +193,8 @@
         }
     ];
 
+    shares = shares.slice(0, 1);
+
     var templateStr = [
         '<div class="share-item clearfix" data-id="<%= id %>">',
             '<div class="head">',
@@ -193,8 +205,10 @@
                 '<div class="wrapper-text">',
                     '<%= text %>',
                 '</div>',
-                '<div class="wrapper-images">',
-                    '<img src="<%= image %>" data-id="<%= id %>" alt="">',
+                '<div class="wrapper-images clearfix">',
+                    '<% for (var i = 0, length = images.length; i < length; i++) { %>',
+                    '<img src="<%= images[i].preview %>" data-id="<%= id %>" data-detail="<%= images[i].detail %>"  alt="" />',
+                    '<% } %>',
                 '</div>',
                 '<% if (!!position) { %>',
                 '<div class="position"><%= position %></div>',
