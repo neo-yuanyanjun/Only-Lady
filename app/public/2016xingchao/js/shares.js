@@ -191,7 +191,7 @@
                     w: 580,
                     h: 326,
                     preview: './img/share-images-pre/05/3.png',
-                    detail: './img/share-images/05/3.png'
+                    detail: './img/share-images/05/3.jpg'
                 },
                 {
                     w: 760,
@@ -215,13 +215,13 @@
                     w: 600,
                     h: 600,
                     preview: './img/share-images-pre/05/7.png',
-                    detail: './img/share-images/05/7.png'
+                    detail: './img/share-images/05/7.jpg'
                 },
                 {
                     w: 800,
                     h: 800,
                     preview: './img/share-images-pre/05/8.png',
-                    detail: './img/share-images/05/8.png'
+                    detail: './img/share-images/05/8.jpg'
                 }
             ],
             position: '',
@@ -243,55 +243,55 @@
                     w: 730,
                     h: 1135,
                     preview: './img/share-images-pre/06/1.png',
-                    detail: './img/share-images/06/1.png'
+                    detail: './img/share-images/06/1.jpg'
                 },
                 {
                     w: 730,
                     h: 1125,
                     preview: './img/share-images-pre/06/2.png',
-                    detail: './img/share-images/06/2.png'
+                    detail: './img/share-images/06/2.jpg'
                 },
                 {
                     w: 730,
                     h: 1135,
                     preview: './img/share-images-pre/06/3.png',
-                    detail: './img/share-images/06/3.png'
+                    detail: './img/share-images/06/3.jpg'
                 },
                 {
                     w: 730,
                     h: 1135,
                     preview: './img/share-images-pre/06/4.png',
-                    detail: './img/share-images/06/4.png'
+                    detail: './img/share-images/06/4.jpg'
                 },
                 {
                     w: 1024,
                     h: 682,
                     preview: './img/share-images-pre/06/5.png',
-                    detail: './img/share-images/06/5.png'
+                    detail: './img/share-images/06/5.jpg'
                 },
                 {
                     w: 1024,
                     h: 579,
                     preview: './img/share-images-pre/06/6.png',
-                    detail: './img/share-images/06/6.png'
+                    detail: './img/share-images/06/6.jpg'
                 },
                 {
                     w: 2048,
                     h: 3072,
                     preview: './img/share-images-pre/06/7.png',
-                    detail: './img/share-images/06/7.png'
+                    detail: './img/share-images/06/7.jpg'
                 },
                 {
                     w: 1024,
                     h: 683,
                     preview: './img/share-images-pre/06/8.png',
-                    detail: './img/share-images/06/8.png'
+                    detail: './img/share-images/06/8.jpg'
                 },
                 {
                     w: 1024,
                     h: 683,
                     preview: './img/share-images-pre/06/9.png',
-                    detail: './img/share-images/06/9.png'
+                    detail: './img/share-images/06/9.jpg'
                 }
             ],
             position: '',
@@ -316,25 +316,25 @@
                     w: 1706,
                     h: 960,
                     preview: './img/share-images-pre/07/1.png',
-                    detail: './img/share-images/07/1.png'
+                    detail: './img/share-images/07/1.jpg'
                 },
                 {
                     w: 1024,
                     h: 576,
                     preview: './img/share-images-pre/07/2.png',
-                    detail: './img/share-images/07/2.png'
+                    detail: './img/share-images/07/2.jpg'
                 },
                 {
                     w: 1000,
                     h: 1000,
                     preview: './img/share-images-pre/07/3.png',
-                    detail: './img/share-images/07/3.png'
+                    detail: './img/share-images/07/3.jpg'
                 },
                 {
                     w: 1000,
                     h: 1000,
                     preview: './img/share-images-pre/07/4.png',
-                    detail: './img/share-images/07/4.png'
+                    detail: './img/share-images/07/4.jpg'
                 }
             ],
             position: '',
@@ -364,7 +364,7 @@
                     w: 220,
                     h: 220,
                     preview: './img/share-images-pre/08/2.png',
-                    detail: './img/share-images/08/2.png'
+                    detail: './img/share-images/08/2.jpg'
                 }
             ],
             position: '',
@@ -539,8 +539,8 @@
 
     function initQRcode() {
         $('.share-item[data-id="' + 10 + '"] .wrapper-images').html([
-            '<img src="./img/QRcode-1.png" alt="" style="margin-right: 6px;" />',
-            '<img src="./img/QRcode-2.png" alt="" />'
+            '<img src="./img/QRcode-1.png" data-id="10" alt="" style="margin-right: 6px;" />',
+            '<img src="./img/QRcode-2.png" data-id="10" alt="" />'
         ].join(''));
     }
 
@@ -578,7 +578,35 @@
             id = parseInt(id, 10);
             return id !== 9 && id !== 10 && id !== 11;
         }).on('tap', function () {
-            alert(1);
+            var id = $(this).attr('data-id');
+            id = parseInt(id, 10);
+
+            var shareItem = _.find(shares, function (item) {
+                return item.id === id;
+            });
+            if (!shareItem) {
+                return;
+            }
+
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+            var slides = _.map(shareItem.images, function (imgConf) {
+                return {
+                    src: imgConf.detail,
+                    w: imgConf.w,
+                    h: imgConf.h,
+                    msrc: imgConf.preview
+                };
+            });
+            var options = {
+                index: $(this).index()
+            };
+            var gallery = new window.PhotoSwipe(
+                pswpElement,
+                window.PhotoSwipeUI_Default,
+                slides,
+                options
+            );
+            gallery.init();
         });
     }
 

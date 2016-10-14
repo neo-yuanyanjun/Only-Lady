@@ -106,10 +106,14 @@ $(document).ready(function () {
     $('body').on('touchmove', window.app.preventScroll);
 
 
+    var hash = window.location.hash;
+
+    if (/shares/.test(hash)) {
+        window.app.initSharesPage();
+        return;
+    }
+
     switch (window.location.hash) {
-        case '#shares':
-            window.app.initSharesPage();
-            break;
         case '#chat':
             window.app.initChatPage();
             break;

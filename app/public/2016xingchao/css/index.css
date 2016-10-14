@@ -619,3 +619,6 @@ html, body {
     margin-top: 6px;
 }
 
+.pswp__button--share {
+    display: none!important;
+}
