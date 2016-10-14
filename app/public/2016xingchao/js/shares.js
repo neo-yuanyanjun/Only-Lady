@@ -538,7 +538,7 @@
 
 
     function initQRcode() {
-        $('.share-item[data-id="' + 10 + '"] .wrapper-images').html([
+        $('.share-item[data-id="' + 10 + '"] .wrapper-images').addClass('qrcode-images-wrapper').html([
             '<img src="./img/QRcode-1.png" data-id="10" alt="" style="margin-right: 6px;" />',
             '<img src="./img/QRcode-2.png" data-id="10" alt="" />'
         ].join(''));
