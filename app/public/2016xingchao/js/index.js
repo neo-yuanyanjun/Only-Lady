@@ -17,7 +17,7 @@
     // 视频直播的地址
     app.liveUrl = 'http://www.meipai.com/media/582707501';
     // 爱奇艺商城的地址
-    app.mallIqiyiUrl = 'http://mall.iqiyi.com/';
+    app.mallIqiyiUrl = 'http://mall.iqiyi.com/kszt/mainPage1025.html';
 
 
 

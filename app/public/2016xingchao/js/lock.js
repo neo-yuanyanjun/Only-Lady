@@ -46,11 +46,12 @@
         $('.module').hide();
         $('.module-lock-screen').show();
 
-        app.sendMessages(requests, temp, $('.module-lock-screen .requests-list'))
+        app.sendMessages(requests, temp, $('.module-lock-screen .requests-list'), false, 1000)
             .then(function () {
                 // 在所有好友请求消息显示 500ms 后才能切换到解锁界面
                 setTimeout(function () {
                     $('body').on('swipeUp', swipeUpHandler);
+                    $('.module-lock-screen .hint-slide-up').addClass('animate-shaking');
                 }, 500);
             });
     };

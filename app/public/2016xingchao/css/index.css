@@ -278,6 +278,9 @@ html, body {
 .module-chat .message-item.image-message .message-hint {
     display: none;
 }
+.module-chat .message-item.image-message .wrapper-message-content img {
+    max-width: 100%;
+}
 .module-chat .message-item.my-message .message-head {
     float: right;
     margin-left: 0;

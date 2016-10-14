@@ -11,7 +11,7 @@
     var chatMessages = [
         {
             head: './img/head-zhangqishan.png',
-            message: './img/message-1.png',
+            message: './img/message-1.gif',
             type: 'image',
             isMyself: false
         },
@@ -23,7 +23,7 @@
         },
         {
             head: './img/head-yinxinyue.png',
-            message: './img/message-3.png',
+            message: './img/message-3.gif',
             type: 'image',
             isMyself: false
         },
@@ -35,7 +35,7 @@
         },
         {
             head: './img/head-liudawei.png',
-            message: './img/message-5.png',
+            message: './img/message-5.gif',
             type: 'image',
             isMyself: false
         },
@@ -119,7 +119,9 @@
         app.sendMessages(
             chatMessages.slice(0, chatMessages.length - 2),
             messageTemplate,
-            $('.module-chat .message-list')
+            $('.module-chat .message-list'),
+            false,
+            1000
         ).then(function () {
             showKeyBoard();
         });
