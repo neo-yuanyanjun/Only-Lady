@@ -622,3 +622,12 @@ html, body {
 .pswp__button--share {
     display: none!important;
 }
+
+.module-live {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10000;
+    display: none;
+    background: rgba(0, 0, 0, 1);
+}

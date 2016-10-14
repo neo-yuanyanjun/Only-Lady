@@ -23,7 +23,18 @@
 
 
 
-    app.player = document.getElementById('player');
+    app.player = {
+        play: function () {
+            if (!this.video.ended) {
+                console.log('not ended');
+                // this.currentTime = 0;
+                // this.video.pause();
+                this.video.load();
+            }
+            this.video.play();
+        },
+        video: document.getElementById('player')
+    };
 
     app.sendMessageImmediately = function (msgObj, tpl, container, noBgm) {
         !noBgm && app.player.play();
