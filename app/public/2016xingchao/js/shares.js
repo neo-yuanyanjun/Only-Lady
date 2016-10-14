@@ -43,6 +43,24 @@
             name: '大老师',
             text: '哈喽啊(•͈˽•͈)，大蜜们！大老师同款牛肉干，相当有料！吃起来的feel倍儿爽！',
             image: './img/share-img-02.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/02/1.png',
+                    detail: './img/share-images/02/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/02/2.png',
+                    detail: './img/share-images/02/2.png'
+                },
+                {
+                    preview: './img/share-images-pre/02/3.png',
+                    detail: './img/share-images/02/3.png'
+                },
+                {
+                    preview: './img/share-images-pre/02/4.png',
+                    detail: './img/share-images/02/4.png'
+                }
+            ],
             position: '湖南.长沙',
             time: '8分钟前',
             likes: '薛老师,鹿不羁',
@@ -61,6 +79,28 @@
             name: '鹿不羁',
             text: '大猴我峦！一起上学的小伙伴儿们都在背zhei款书包，我要不要也来一个？',
             image: './img/share-img-03.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/03/1.png',
+                    detail: './img/share-images/03/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/03/2.png',
+                    detail: './img/share-images/03/2.png'
+                },
+                {
+                    preview: './img/share-images-pre/03/3.png',
+                    detail: './img/share-images/03/3.png'
+                },
+                {
+                    preview: './img/share-images-pre/03/4.png',
+                    detail: './img/share-images/03/4.png'
+                },
+                {
+                    preview: './img/share-images-pre/03/5.png',
+                    detail: './img/share-images/03/5.png'
+                }
+            ],
             position: '',
             time: '15分钟前',
             likes: 'Ella,潘玮柏,大老师,魏晨,薛之谦',
@@ -76,6 +116,20 @@
             name: '柳大尉',
             text: '明天要赴约，先安利大家一款自己带盐的面膜<img src="./img/face-4.png" alt="" />然后，请大家帮忙挑挑下面两款戴哪个去约会比较帅？',
             image: './img/share-img-04.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/04/1.png',
+                    detail: './img/share-images/04/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/04/2.png',
+                    detail: './img/share-images/04/2.png'
+                },
+                {
+                    preview: './img/share-images-pre/04/3.png',
+                    detail: './img/share-images/04/3.png'
+                }
+            ],
             position: '',
             time: '8分钟前',
             likes: '尹明珠,徐大英',
@@ -92,6 +146,40 @@
             name: '姜暮烟',
             text: '一会儿要约会，给大家推荐这款粉底和口红，炒鸡好用！简直约会必备神器~',
             image: './img/share-img-05.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/05/1.png',
+                    detail: './img/share-images/05/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/05/2.png',
+                    detail: './img/share-images/05/2.png'
+                },
+                {
+                    preview: './img/share-images-pre/05/3.png',
+                    detail: './img/share-images/05/3.png'
+                },
+                {
+                    preview: './img/share-images-pre/05/4.png',
+                    detail: './img/share-images/05/4.png'
+                },
+                {
+                    preview: './img/share-images-pre/05/5.png',
+                    detail: './img/share-images/05/5.png'
+                },
+                {
+                    preview: './img/share-images-pre/05/6.png',
+                    detail: './img/share-images/05/6.png'
+                },
+                {
+                    preview: './img/share-images-pre/05/7.png',
+                    detail: './img/share-images/05/7.png'
+                },
+                {
+                    preview: './img/share-images-pre/05/8.png',
+                    detail: './img/share-images/05/8.png'
+                }
+            ],
             position: '',
             time: '50分钟前',
             likes: '李治勋,丹尼尔,李艺花',
@@ -106,6 +194,44 @@
             name: '志玲姐姐',
             text: '今天跟西班牙设计师玩的好开心，穿上小彩虹和小马宝莉，萌萌哒。爱奇艺商城有售噢！',
             image: './img/share-img-06.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/06/1.png',
+                    detail: './img/share-images/06/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/2.png',
+                    detail: './img/share-images/06/2.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/3.png',
+                    detail: './img/share-images/06/3.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/4.png',
+                    detail: './img/share-images/06/4.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/5.png',
+                    detail: './img/share-images/06/5.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/6.png',
+                    detail: './img/share-images/06/6.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/7.png',
+                    detail: './img/share-images/06/7.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/8.png',
+                    detail: './img/share-images/06/8.png'
+                },
+                {
+                    preview: './img/share-images-pre/06/9.png',
+                    detail: './img/share-images/06/9.png'
+                }
+            ],
             position: '',
             time: '1小时前',
             likes: '吴昕,何穗,设计师Maria',
@@ -123,6 +249,24 @@
             name: '小S',
             text: '刚看到林志玲在发朋友圈，黄渤居然说她比我美？！<img src="./img/face-6.png" alt="" />气到大姨妈痛…来杯姜茶暖暖身',
             image: './img/share-img-07.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/07/1.png',
+                    detail: './img/share-images/07/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/07/2.png',
+                    detail: './img/share-images/07/2.png'
+                },
+                {
+                    preview: './img/share-images-pre/07/3.png',
+                    detail: './img/share-images/07/3.png'
+                },
+                {
+                    preview: './img/share-images-pre/07/4.png',
+                    detail: './img/share-images/07/4.png'
+                }
+            ],
             position: '',
             time: '1小时前',
             likes: '刘烨,黄晓明,冯小刚',
@@ -139,6 +283,16 @@
             name: '海棠',
             text: '刚刚在朋友圈买了一个限量款包包，居然发现是假货！<img src="./img/face-9.png" alt="" />',
             image: './img/share-img-08.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/08/1.png',
+                    detail: './img/share-images/08/1.png'
+                },
+                {
+                    preview: './img/share-images-pre/08/2.png',
+                    detail: './img/share-images/08/2.png'
+                }
+            ],
             position: '',
             time: '1小时前',
             likes: '',
@@ -155,6 +309,12 @@
             name: '主播大琳',
             text: '我正在直播教你如何化妆，快来围观！',
             image: './img/share-img-09.png',
+            images: [
+                {
+                    preview: './img/share-images-pre/01/1.png',
+                    detail: './img/share-images/01/1.png'
+                }
+            ],
             position: '',
             time: '2小时前',
             likes: '洛黎kiki,可涵,手边巴黎,陆冠驰,路人甲',
@@ -193,7 +353,7 @@
         }
     ];
 
-    shares = shares.slice(0, 1);
+    shares = shares.slice(0, 8);
 
     var templateStr = [
         '<div class="share-item clearfix" data-id="<%= id %>">',
