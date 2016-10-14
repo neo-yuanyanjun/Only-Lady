@@ -628,7 +628,7 @@
 
         initLinks();
 
-        initHash();
+        // initHash();
 
         initPhotoSwipe();
     };
