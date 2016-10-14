@@ -17,12 +17,16 @@
             image: './img/share-img-01.png',
             images: [
                 {
+                    w: 588,
+                    h: 582,
                     preview: './img/share-images-pre/01/1.png',
                     detail: './img/share-images/01/1.png'
                 },
                 {
+                    w: 1751,
+                    h: 960,
                     preview: './img/share-images-pre/01/2.png',
-                    detail: './img/share-images/01/1.jpg'
+                    detail: './img/share-images/01/2.jpg'
                 }
             ],
             position: '湖南 . 长沙',
@@ -45,20 +49,28 @@
             image: './img/share-img-02.png',
             images: [
                 {
+                    w: 800,
+                    h: 800,
                     preview: './img/share-images-pre/02/1.png',
-                    detail: './img/share-images/02/1.png'
+                    detail: './img/share-images/02/1.jpg'
                 },
                 {
+                    w: 800,
+                    h: 800,
                     preview: './img/share-images-pre/02/2.png',
-                    detail: './img/share-images/02/2.png'
+                    detail: './img/share-images/02/2.jpg'
                 },
                 {
+                    w: 1348,
+                    h: 749,
                     preview: './img/share-images-pre/02/3.png',
                     detail: './img/share-images/02/3.png'
                 },
                 {
+                    w: 1920,
+                    h: 1080,
                     preview: './img/share-images-pre/02/4.png',
-                    detail: './img/share-images/02/4.png'
+                    detail: './img/share-images/02/4.jpg'
                 }
             ],
             position: '湖南.长沙',
@@ -81,24 +93,34 @@
             image: './img/share-img-03.png',
             images: [
                 {
+                    w: 2670,
+                    h: 1498,
                     preview: './img/share-images-pre/03/1.png',
                     detail: './img/share-images/03/1.png'
                 },
                 {
+                    w: 1200,
+                    h: 651,
                     preview: './img/share-images-pre/03/2.png',
                     detail: './img/share-images/03/2.png'
                 },
                 {
+                    w: 1920,
+                    h: 1080,
                     preview: './img/share-images-pre/03/3.png',
-                    detail: './img/share-images/03/3.png'
+                    detail: './img/share-images/03/3.jpg'
                 },
                 {
+                    w: 2668,
+                    h: 1492,
                     preview: './img/share-images-pre/03/4.png',
                     detail: './img/share-images/03/4.png'
                 },
                 {
+                    w: 800,
+                    h: 800,
                     preview: './img/share-images-pre/03/5.png',
-                    detail: './img/share-images/03/5.png'
+                    detail: './img/share-images/03/5.jpg'
                 }
             ],
             position: '',
@@ -118,16 +140,22 @@
             image: './img/share-img-04.png',
             images: [
                 {
+                    w: 800,
+                    h: 800,
                     preview: './img/share-images-pre/04/1.png',
-                    detail: './img/share-images/04/1.png'
+                    detail: './img/share-images/04/1.jpg'
                 },
                 {
+                    w: 800,
+                    h: 800,
                     preview: './img/share-images-pre/04/2.png',
-                    detail: './img/share-images/04/2.png'
+                    detail: './img/share-images/04/2.jpg'
                 },
                 {
+                    w: 800,
+                    h: 800,
                     preview: './img/share-images-pre/04/3.png',
-                    detail: './img/share-images/04/3.png'
+                    detail: './img/share-images/04/3.jpg'
                 }
             ],
             position: '',
@@ -148,34 +176,50 @@
             image: './img/share-img-05.png',
             images: [
                 {
+                    w: 771,
+                    h: 478,
                     preview: './img/share-images-pre/05/1.png',
                     detail: './img/share-images/05/1.png'
                 },
                 {
+                    w: 1187,
+                    h: 612,
                     preview: './img/share-images-pre/05/2.png',
                     detail: './img/share-images/05/2.png'
                 },
                 {
+                    w: 580,
+                    h: 326,
                     preview: './img/share-images-pre/05/3.png',
                     detail: './img/share-images/05/3.png'
                 },
                 {
+                    w: 760,
+                    h: 420,
                     preview: './img/share-images-pre/05/4.png',
                     detail: './img/share-images/05/4.png'
                 },
                 {
+                    w: 1146,
+                    h: 592,
                     preview: './img/share-images-pre/05/5.png',
                     detail: './img/share-images/05/5.png'
                 },
                 {
+                    w: 790,
+                    h: 471,
                     preview: './img/share-images-pre/05/6.png',
                     detail: './img/share-images/05/6.png'
                 },
                 {
+                    w: 600,
+                    h: 600,
                     preview: './img/share-images-pre/05/7.png',
                     detail: './img/share-images/05/7.png'
                 },
                 {
+                    w: 800,
+                    h: 800,
                     preview: './img/share-images-pre/05/8.png',
                     detail: './img/share-images/05/8.png'
                 }
@@ -196,38 +240,56 @@
             image: './img/share-img-06.png',
             images: [
                 {
+                    w: 730,
+                    h: 1135,
                     preview: './img/share-images-pre/06/1.png',
                     detail: './img/share-images/06/1.png'
                 },
                 {
+                    w: 730,
+                    h: 1125,
                     preview: './img/share-images-pre/06/2.png',
                     detail: './img/share-images/06/2.png'
                 },
                 {
+                    w: 730,
+                    h: 1135,
                     preview: './img/share-images-pre/06/3.png',
                     detail: './img/share-images/06/3.png'
                 },
                 {
+                    w: 730,
+                    h: 1135,
                     preview: './img/share-images-pre/06/4.png',
                     detail: './img/share-images/06/4.png'
                 },
                 {
+                    w: 1024,
+                    h: 682,
                     preview: './img/share-images-pre/06/5.png',
                     detail: './img/share-images/06/5.png'
                 },
                 {
+                    w: 1024,
+                    h: 579,
                     preview: './img/share-images-pre/06/6.png',
                     detail: './img/share-images/06/6.png'
                 },
                 {
+                    w: 2048,
+                    h: 3072,
                     preview: './img/share-images-pre/06/7.png',
                     detail: './img/share-images/06/7.png'
                 },
                 {
+                    w: 1024,
+                    h: 683,
                     preview: './img/share-images-pre/06/8.png',
                     detail: './img/share-images/06/8.png'
                 },
                 {
+                    w: 1024,
+                    h: 683,
                     preview: './img/share-images-pre/06/9.png',
                     detail: './img/share-images/06/9.png'
                 }
@@ -251,18 +313,26 @@
             image: './img/share-img-07.png',
             images: [
                 {
+                    w: 1706,
+                    h: 960,
                     preview: './img/share-images-pre/07/1.png',
                     detail: './img/share-images/07/1.png'
                 },
                 {
+                    w: 1024,
+                    h: 576,
                     preview: './img/share-images-pre/07/2.png',
                     detail: './img/share-images/07/2.png'
                 },
                 {
+                    w: 1000,
+                    h: 1000,
                     preview: './img/share-images-pre/07/3.png',
                     detail: './img/share-images/07/3.png'
                 },
                 {
+                    w: 1000,
+                    h: 1000,
                     preview: './img/share-images-pre/07/4.png',
                     detail: './img/share-images/07/4.png'
                 }
@@ -285,10 +355,14 @@
             image: './img/share-img-08.png',
             images: [
                 {
+                    w: 861,
+                    h: 527,
                     preview: './img/share-images-pre/08/1.png',
                     detail: './img/share-images/08/1.png'
                 },
                 {
+                    w: 220,
+                    h: 220,
                     preview: './img/share-images-pre/08/2.png',
                     detail: './img/share-images/08/2.png'
                 }
