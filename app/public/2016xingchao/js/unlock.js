@@ -93,8 +93,8 @@
     // 前景svg
     var frSvg = null;
 
-    function init () {
-        app.setTitle('滑"7"解锁');
+    function init() {
+        // app.setTitle('滑"7"解锁');
         initUserInfo();
         var svgContainer = $('.module-unlock-screen .svg-container')[0];
         // 背景svg
@@ -118,7 +118,7 @@
         // 绑定事件
         $('body').on('touchmove', touchmoveHandler);
         $('body').on('touchend', touchendHandler);
-    };
+    }
 
     function touchmoveHandler(evt) {
         var touch = evt.touches[0];
@@ -167,7 +167,7 @@
         // backup方案
         var childNodes = frSvg.childNodes;
         var length = childNodes.length;
-        while(length--) {
+        while (length--) {
             frSvg.removeChild(childNodes[length]);
         }
     }
@@ -176,7 +176,7 @@
         app.initChatPage();
     }
 
-    function initUserInfo () {
+    function initUserInfo() {
         $('.module-unlock-screen .wrapper-username').html(app.userInfo.name);
         $('.module-unlock-screen .wrapper-user-head img').attr('src', app.userInfo.head);
     }
@@ -185,5 +185,5 @@
         $('.module').hide();
         $('.module-unlock-screen').show();
         init();
-    }
+    };
 })(window);
