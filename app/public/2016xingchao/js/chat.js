@@ -121,7 +121,7 @@
             messageTemplate,
             $('.module-chat .message-list'),
             false,
-            1000
+            1500
         ).then(function () {
             showKeyBoard();
         });
