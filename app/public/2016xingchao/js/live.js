@@ -41,9 +41,9 @@
     };
 
     app.closeLivePage = function () {
-        // 华为手机无法重新定位到锚点的bug
-        $(window).scrollTop(app.windowScrollTop);
         $('.module-live').hide();
         $('body').off('touchmove', window.app.preventScroll);
+        // 华为手机无法重新定位到锚点的bug
+        $(window).scrollTop(app.windowScrollTop);
     };
 })(window);
