@@ -26,6 +26,8 @@
 
     app.initLivePage = function () {
         var $win = $(window);
+        // 华为手机无法重新定位到锚点的bug
+        app.windowScrollTop = $win.scrollTop();
         $('.module-live').show().css({
             width: $win.width(),
             height: $win.height()
@@ -39,7 +41,9 @@
     };
 
     app.closeLivePage = function () {
+        // 华为手机无法重新定位到锚点的bug
+        $(window).scrollTop(app.windowScrollTop);
         $('.module-live').hide();
         $('body').off('touchmove', window.app.preventScroll);
-    }
+    };
 })(window);

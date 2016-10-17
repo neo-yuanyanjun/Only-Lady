@@ -619,7 +619,11 @@
 
         $('body').off('touchmove', app.preventScroll);
         // TODO 这里可能会有问题，需要测试兼容性
-        $('html, body, .main, .module-shares').css('height', 'auto');
+        // $('html, body, .main, .module-shares').css('height', 'auto');
+        $('html, body').css('height', 'auto');
+        $('.main').css('height', 'auto');
+        // 下面这句会导致
+        // $('.module-shares').css('height', 'auto');
 
         initLike();
 
