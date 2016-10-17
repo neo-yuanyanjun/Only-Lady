@@ -419,7 +419,7 @@
             image: './img/share-img-11.png',
             images: [
                 {
-                    preview: './img/share-img-11.png',
+                    preview: './img/share-img-12.png',
                     detail: ''
                 }
             ],
@@ -563,6 +563,12 @@
             width: 'auto',
             height: 'auto'
         }).wrap('<a href="' + app.mallIqiyiUrl + '"></a>');
+        $('.share-item[data-id="' + 11 + '"] .wrapper-images').css({
+            position: 'relative'
+        })
+        .find('a')
+        .append('<img class="animate-shaking" src="./img/hand.png" '
+            + 'style="position: absolute; left: 180px; top: 96px; width: 84px; height: 84px;" alt="" />');
     }
 
     function initHash() {

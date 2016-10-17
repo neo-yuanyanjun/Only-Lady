@@ -600,7 +600,7 @@ html, body {
     position: relative;
 }
 .module-live .btn-close {
-    z-index: 2;
+    z-index: 10;
     position: absolute;
     top: 20px;
     right: 20px;
