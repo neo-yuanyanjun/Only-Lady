@@ -395,6 +395,7 @@ html, body {
     margin-top: 22px;
     font-size: 20px;
     color: #6d6d6d;
+    display: none;
 }
 .module-shares .share-item .details .wrapper-time-opration {
     margin-top: 20px;

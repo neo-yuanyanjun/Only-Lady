@@ -125,7 +125,7 @@
             ],
             position: '',
             time: '15分钟前',
-            likes: 'Ella,潘玮柏,大老师,魏晨,薛之谦',
+            likes: 'Ella,潘玮柏,大老师,魏晨,薛老师',
             comments: [
                 '<span>大老师</span>: 可以有！',
                 '<span>潘帅</span>: 可以有！',
@@ -512,11 +512,20 @@
                 likes = _.without(likes, id);
                 $this.html('赞');
                 $this.parents('.share-item').find('.likes').html(likesHtml);
+                if (!likesHtml) {
+                    $this.parents('.share-item').find('.likes').hide();
+                }
             }
             else {
                 likes = _.union(likes, [id]);
                 $this.html('取消');
-                $this.parents('.share-item').find('.likes').html(likesHtml + ',' + app.userInfo.name);
+                var $likes = $this.parents('.share-item').find('.likes');
+                if ($likes.length === 0) {
+                    $likes = $('<div class="likes" data-id="' + id + '"></div>');
+                    $this.parents('.share-item').find('.wrapper-likes-comments').prepend($likes);
+                }
+                likesHtml = likesHtml ? likesHtml + ',' + app.userInfo.name : app.userInfo.name;
+                $likes.show().html(likesHtml);
             }
             likes = _.uniq(likes);
             likes = _.filter(likes, function (id) {
@@ -531,8 +540,14 @@
             var html = (_.find(shares, function (shareCon) {
                 return shareCon.id === +id;
             }) || {}).likes;
+            html = html ? html + ',' + app.userInfo.name : app.userInfo.name;
             $('.shares-list .btn-like[data-id="' + id + '"]').html('取消');
-            $('.shares-list .likes[data-id="' + id + '"]').html(html + ',' + app.userInfo.name);
+            var $likes = $('.share-item[data-id="' + id + '"] .likes[data-id="' + id + '"]');
+            if ($likes.length === 0) {
+                $likes = $('<div class="likes" data-id="' + id + '"></div>');
+                $('.share-item[data-id="' + id + '"] .wrapper-likes-comments').prepend($likes);
+            }
+            $likes.html(html);
         });
     }
 
