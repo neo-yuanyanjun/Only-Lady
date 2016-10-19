@@ -125,7 +125,7 @@
             ],
             position: '',
             time: '15分钟前',
-            likes: 'Ella,潘玮柏,大老师,魏晨,薛老师',
+            likes: 'Ella,潘帅,大老师,魏晨,薛老师',
             comments: [
                 '<span>大老师</span>: 可以有！',
                 '<span>潘帅</span>: 可以有！',
