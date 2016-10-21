@@ -399,7 +399,7 @@
             ],
             position: '',
             time: '2小时前',
-            likes: '洛黎kiki,可涵,手边巴黎,陆冠驰,路人甲',
+            likes: '黎洛kiki,陆仁贾',
             comments: [
                 '<span>i红人圈</span>: 主播美美哒，好多流行又平价的单品，被种草！'
             ]
@@ -423,7 +423,8 @@
             id: 11,
             head: './img/head-yuxiaoer.png',
             name: '余小二',
-            text: '《余罪》华丽丽的播放量，都是大家的功劳！感谢大家对小二的支持，小二在此给大家发个红包， 以表感谢，谢谢大家，我会继续努力！<img src="./img/face-11.png" alt="" />',
+            text: '<span style="font-size: bold;">感谢大家对小二的支持，小二在此给大家发个爱奇艺商城大红包，免费领取抵用现金，快拆！手慢无！！！'
+                + '</span><img src="./img/face-11.png" alt="" />',
             image: './img/share-img-11.png',
             images: [
                 {
