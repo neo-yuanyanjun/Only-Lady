@@ -423,7 +423,7 @@
             id: 11,
             head: './img/head-yuxiaoer.png',
             name: '余小二',
-            text: '<span style="font-weight: bold;">感谢大家对小二的支持，小二在此给大家发个爱奇艺商城大红包，免费领取抵用现金，快拆！手慢无！！！'
+            text: '<span style="font-weight: bold;">《余罪》华丽丽的播放量，都是大家的功劳，感谢大家对小二的支持，小二在此给大家发个爱奇艺商城大红包，免费领取抵用现金，快拆！手慢无！！！'
                 + '</span><img src="./img/face-11.png" alt="" />',
             image: './img/share-img-11.png',
             images: [
