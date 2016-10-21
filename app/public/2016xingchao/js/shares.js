@@ -388,10 +388,12 @@
             head: './img/head-dalin.png',
             name: '主播大琳',
             text: '我正在直播教你如何化妆，快来围观！',
-            image: './img/share-img-09.png',
+            // image: './img/share-img-09.png',
+            image: './img/live-preview.png',
             images: [
                 {
-                    preview: './img/share-img-09.png',
+                    // preview: './img/share-img-09.png',
+                    preview: './img/live-preview.png',
                     detail: ''
                 }
             ],
@@ -582,15 +584,15 @@
             });
         // 爱奇艺商城
         $('.share-item[data-id="' + 11 + '"] .wrapper-images img').css({
-            width: 'auto',
+            width: '448px',
             height: 'auto'
         }).wrap('<a href="' + app.mallIqiyiUrl + '"></a>');
         $('.share-item[data-id="' + 11 + '"] .wrapper-images').css({
             position: 'relative'
         })
         .find('a')
-        .append('<img class="animate-shaking" src="./img/hand.png" '
-            + 'style="position: absolute; left: 280px; top: 96px; width: 84px; height: 84px;" alt="" />');
+        .append('<img class="animate-shaking" src="./img/hand2.png" '
+            + 'style="position: absolute; left: 418px; top: 234px; width: 84px; height: 84px;" alt="" />');
     }
 
     function initHash() {
