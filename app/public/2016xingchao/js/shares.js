@@ -17,16 +17,22 @@
             image: './img/share-img-01.png',
             images: [
                 {
-                    w: 588,
-                    h: 582,
+                    // w: 588,
+                    // h: 582,
+                    w: 294,
+                    h: 291,
                     preview: './img/share-images-pre/01/1.png',
-                    detail: './img/share-images/01/1.png'
+                    // detail: './img/share-images/01/1.png'
+                    detail: './img/share-images/01/1-2.png'
                 },
                 {
-                    w: 1751,
-                    h: 960,
+                    // w: 1751,
+                    // h: 960,
+                    w: 876,
+                    h: 480,
                     preview: './img/share-images-pre/01/2.png',
-                    detail: './img/share-images/01/2.jpg'
+                    // detail: './img/share-images/01/2.jpg'
+                    detail: './img/share-images/01/2-2.jpg'
                 }
             ],
             position: '湖南 . 长沙',
@@ -419,7 +425,8 @@
             image: './img/share-img-11.png',
             images: [
                 {
-                    preview: './img/share-img-12.png',
+                    // preview: './img/share-img-12.png',
+                    preview: './img/envelope.gif',
                     detail: ''
                 }
             ],
@@ -583,7 +590,7 @@
         })
         .find('a')
         .append('<img class="animate-shaking" src="./img/hand.png" '
-            + 'style="position: absolute; left: 180px; top: 96px; width: 84px; height: 84px;" alt="" />');
+            + 'style="position: absolute; left: 280px; top: 96px; width: 84px; height: 84px;" alt="" />');
     }
 
     function initHash() {

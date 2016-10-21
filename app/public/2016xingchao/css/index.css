@@ -638,4 +638,18 @@ html, body {
     width: 350px;
     height: 350px;
     margin-top: 6px;
-} 
+}
+
+
+.pswp .pswp__button--fs {
+    display: none;
+}
+
+.pswp .pswp__button--close {
+    width: 88px;
+    height: 88px;
+    background-size: 528px 176px;
+    background-position: 0 -88px;
+}
+
+
